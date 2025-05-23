@@ -1,0 +1,119 @@
+/* === ANIMATION DURATION & TIMING === */
+.animate-fast { animation-duration: 0.3s !important; }
+.animate-normal { animation-duration: 0.6s !important; }
+.animate-slow { animation-duration: 1s !important; }
+.animate-linear { animation-timing-function: linear !important; }
+.animate-ease { animation-timing-function: ease !important; }
+.animate-ease-in { animation-timing-function: ease-in !important; }
+.animate-ease-out { animation-timing-function: ease-out !important; }
+.animate-ease-in-out { animation-timing-function: ease-in-out !important; }
+
+/* === FADE ANIMATIONS === */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.fade-in {
+  animation: fade-in 0.6s forwards ease;
+}
+
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+.fade-out {
+  animation: fade-out 0.6s forwards ease;
+}
+
+/* === SLIDE ANIMATIONS === */
+@keyframes slide-up {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.slide-up {
+  animation: slide-up 0.6s forwards ease;
+}
+
+@keyframes slide-down {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.slide-down {
+  animation: slide-down 0.6s forwards ease;
+}
+
+@keyframes slide-left {
+  from { transform: translateX(20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.slide-left {
+  animation: slide-left 0.6s forwards ease;
+}
+
+@keyframes slide-right {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.slide-right {
+  animation: slide-right 0.6s forwards ease;
+}
+
+/* === BOUNCE ANIMATIONS === */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+.bounce {
+  animation: bounce 1s infinite ease-in-out;
+}
+
+/* === PULSE ANIMATIONS === */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.pulse {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* === SPIN ANIMATIONS === */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.spin {
+  animation: spin 1s infinite linear;
+}
+
+/* === ZOOM ANIMATIONS === */
+@keyframes zoom-in {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.zoom-in {
+  animation: zoom-in 0.5s forwards ease;
+}
+
+@keyframes zoom-out {
+  from { transform: scale(1); opacity: 1; }
+  to { transform: scale(0.8); opacity: 0; }
+}
+.zoom-out {
+  animation: zoom-out 0.5s forwards ease;
+}
+
+/* === SHAKE ANIMATIONS === */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-10px); }
+  40%, 80% { transform: translateX(10px); }
+}
+.shake {
+  animation: shake 0.5s 1 ease-in-out;
+}
+
+/* === HELPER CLASSES === */
+.animate-once { animation-iteration-count: 1 !important; }
+.animate-infinite { animation-iteration-count: infinite !important; }
+.animate-paused { animation-play-state: paused !important; }
+.animate-running { animation-play-state: running !important; }

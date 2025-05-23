@@ -1,0 +1,95 @@
+/* ===== Nexwind Print Styles ===== */
+
+/* General body adjustments for print */
+@media print {
+  /* Use a white background and black text for clarity */
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: var(--font-size-base);
+    line-height: 1.4;
+    margin: 1in;
+  }
+
+  /* Remove background images and colors */
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Links: show URL in parentheses after the link text */
+  a:link:after,
+  a:visited:after {
+    content: " (" attr(href) ")";
+    color: #000;
+    text-decoration: none;
+  }
+
+  /* Hide navigation, headers, footers, and other non-essential elements */
+  nav,
+  header,
+  footer,
+  aside,
+  .no-print,
+  .hidden-print {
+    display: none !important;
+  }
+
+  /* Adjust images to avoid breaking pages */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Avoid page breaks inside important blocks */
+  h1, h2, h3, h4, h5, h6,
+  p, blockquote,
+  pre, code,
+  table, figure {
+    page-break-inside: avoid !important;
+  }
+
+  /* Make tables fit nicely */
+  table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    margin-bottom: 1rem;
+  }
+
+  th, td {
+    border: 1px solid #000 !important;
+    padding: 0.25rem 0.5rem !important;
+    text-align: left;
+  }
+
+  /* Remove hover and focus styles */
+  *:hover, *:focus {
+    color: black !important;
+    background: transparent !important;
+    outline: none !important;
+  }
+
+  /* Avoid breaking links across pages */
+  a {
+    page-break-inside: avoid !important;
+  }
+
+  /* Prevent page breaks inside code blocks */
+  pre, code {
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+  }
+
+  /* Remove form controls */
+  input, textarea, select, button {
+    display: none !important;
+  }
+
+  /* Adjust font to serif for better print readability */
+  body, p, li, dt, dd {
+    font-family: var(--font-serif);
+  }
+}

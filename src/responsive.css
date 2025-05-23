@@ -1,0 +1,51 @@
+/* === SMALL DEVICES (min-width: 640px) === */
+@media (min-width: 640px) {
+  .sm\:pd-4 { padding: 1rem; }
+  .sm\:mg-4 { margin: 1rem; }
+  .sm\:fs-md { font-size: 1rem; }
+  .sm\:fs-lg { font-size: 1.25rem; }
+  .sm\:fx { display: flex; }
+  .sm\:fx-col { flex-direction: column; }
+  .sm\:jc-c { justify-content: center; }
+  .sm\:ai-c { align-items: center; }
+  .sm\:d-none { display: none; }
+  .sm\:d-block { display: block; }
+}
+
+/* === MEDIUM DEVICES (min-width: 768px) === */
+@media (min-width: 768px) {
+  .md\:pd-4 { padding: 1rem; }
+  .md\:mg-4 { margin: 1rem; }
+  .md\:fs-lg { font-size: 1.25rem; }
+  .md\:fs-xl { font-size: 1.5rem; }
+  .md\:fx { display: flex; }
+  .md\:fx-row { flex-direction: row; }
+  .md\:jc-sb { justify-content: space-between; }
+  .md\:ai-c { align-items: center; }
+  .md\:d-none { display: none; }
+  .md\:d-block { display: block; }
+}
+
+/* === LARGE DEVICES (min-width: 1024px) === */
+@media (min-width: 1024px) {
+  .lg\:pd-6 { padding: 1.5rem; }
+  .lg\:mg-6 { margin: 1.5rem; }
+  .lg\:fs-xl { font-size: 1.5rem; }
+  .lg\:fx { display: flex; }
+  .lg\:jc-c { justify-content: center; }
+  .lg\:ai-c { align-items: center; }
+  .lg\:d-none { display: none; }
+  .lg\:d-block { display: block; }
+}
+
+/* === EXTRA LARGE DEVICES (min-width: 1280px) === */
+@media (min-width: 1280px) {
+  .xl\:pd-6 { padding: 1.5rem; }
+  .xl\:mg-6 { margin: 1.5rem; }
+  .xl\:fs-xl { font-size: 1.5rem; }
+  .xl\:fx { display: flex; }
+  .xl\:jc-c { justify-content: center; }
+  .xl\:ai-c { align-items: center; }
+  .xl\:d-none { display: none; }
+  .xl\:d-block { display: block; }
+}
