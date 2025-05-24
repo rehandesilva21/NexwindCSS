@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 /* === BASE RESET & BOX SIZING === */
 *,
 *::before,
@@ -6,6 +7,10 @@
 }
 :root {
   --unit: 4px; 
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 /* === TEXT COLORS === */

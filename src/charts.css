@@ -1,0 +1,131 @@
+/* ===== Nexwind Charts Styles ===== */
+
+.chart-container {
+  max-width: 100%;
+  margin: 1rem auto;
+  padding: 1rem;
+  box-sizing: border-box;
+  font-family: var(--font-sans);
+  color: var(--color-text-primary);
+}
+
+/* ===== Bar Chart ===== */
+
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--gap, 0.75rem);
+  height: var(--chart-height, 250px);
+  padding: 1rem 0;
+  border-left: 2px solid var(--color-gray-300, #ccc);
+  border-bottom: 2px solid var(--color-gray-300, #ccc);
+  background-color: var(--chart-bg, transparent);
+  user-select: none;
+}
+
+.bar {
+  flex: 1 1 auto;
+  background-color: var(--bar-color, #3b82f6);
+  border-radius: 0.25rem 0.25rem 0 0;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.bar:hover {
+  background-color: var(--bar-hover-color, #2563eb);
+  transform: scale(1.05);
+}
+
+/* Bar label (optional) */
+.bar-label {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--color-text-secondary, #555);
+  user-select: none;
+}
+
+/* ===== Line Chart ===== */
+
+.line-chart {
+  position: relative;
+  height: var(--chart-height, 250px);
+  padding-left: 40px;
+  padding-bottom: 30px;
+  border-left: 2px solid var(--color-gray-300, #ccc);
+  border-bottom: 2px solid var(--color-gray-300, #ccc);
+  background-color: var(--chart-bg, transparent);
+}
+
+.line-chart svg {
+  width: 100%;
+  height: 100%;
+}
+
+.line-path {
+  fill: none;
+  stroke: var(--line-color, #3b82f6);
+  stroke-width: 3;
+  transition: stroke 0.3s ease;
+}
+
+.line-point {
+  fill: var(--line-point-color, #2563eb);
+  stroke: var(--color-white);
+  stroke-width: 2;
+  cursor: pointer;
+  transition: fill 0.3s ease;
+}
+
+.line-point:hover {
+  fill: var(--line-point-hover-color, #1d4ed8);
+}
+
+/* ===== Pie Chart ===== */
+
+.pie-chart {
+  position: relative;
+  width: var(--chart-size, 250px);
+  height: var(--chart-size, 250px);
+  border-radius: 50%;
+  overflow: hidden;
+  user-select: none;
+}
+
+.pie-segment {
+  transition: fill 0.3s ease;
+  cursor: pointer;
+}
+
+.pie-segment:hover {
+  filter: brightness(1.15);
+}
+
+/* ===== Scatter Chart ===== */
+
+.scatter-chart {
+  position: relative;
+  width: 100%;
+  height: var(--chart-height, 250px);
+  padding-left: 40px;
+  padding-bottom: 30px;
+  border-left: 2px solid var(--color-gray-300, #ccc);
+  border-bottom: 2px solid var(--color-gray-300, #ccc);
+  background-color: var(--chart-bg, transparent);
+}
+
+.scatter-point {
+  fill: var(--scatter-point-color, #3b82f6);
+  stroke: var(--color-white);
+  stroke-width: 1.5;
+  cursor: pointer;
+  transition: fill 0.3s ease;
+}
+
+.scatter-point:hover {
+  fill: var(--scatter-point-hover-color, #2563eb);
+}
