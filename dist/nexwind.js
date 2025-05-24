@@ -224,6 +224,37 @@
     });
   }
 
+  // Apply custom gradient backgrounds from data attributes and class names
+  function applyCustomGradients() {
+    // From data-gradient attribute
+    document.querySelectorAll('[data-gradient]').forEach(el => {
+      el.style.backgroundImage = el.getAttribute('data-gradient');
+    });
+
+    // From class names, e.g. gradient-linear-45deg-[#ff0000_#00ff00]
+    document.querySelectorAll('*').forEach(el => {
+      el.classList.forEach(cls => {
+        const gradientRegex = /^gradient-(linear|radial)-([\w\d]+)-\[(.+)\]$/;
+        const match = cls.match(gradientRegex);
+        if (match) {
+          const type = match[1];           // linear or radial
+          const direction = match[2];      // e.g. 45deg, circle, 90deg
+          const colorsRaw = match[3];      // e.g. #ff0000_#00ff00_#0000ff
+          const colors = colorsRaw.split('_').join(', ');
+
+          let gradientValue = '';
+          if (type === 'linear') {
+            gradientValue = `linear-gradient(${direction}, ${colors})`;
+          } else if (type === 'radial') {
+            // direction like 'circle' or 'circle at top left' etc.
+            gradientValue = `radial-gradient(${direction}, ${colors})`;
+          }
+          el.style.backgroundImage = gradientValue;
+        }
+      });
+    });
+  }
+
   // Initialize all utility functions
   function initUtilities() {
     applyPadding();
@@ -238,6 +269,8 @@
 
     applyChartUtilities();
     applyClassBasedChartStyles();
+
+    applyCustomGradients();  // <-- Added here
   }
 
   // Run when DOM is loaded
@@ -249,5 +282,5 @@
 })();
 
 function toggleDarkMode() {
-      document.getElementById('docBody').classList.toggle('dark-mode');
-    }
+  document.getElementById('docBody').classList.toggle('dark-mode');
+}

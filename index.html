@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexwind CSS - Documentation</title>
-    <link rel="stylesheet" href="https://blobs.vusercontent.net/blob/nexwind-zU6vyvUF2BjlpwJdS5prlF4P2BPL2r.css">
+    <link rel="stylesheet" href="dist/nexwind.css">
     
     <style>
         /* Custom documentation styles */
@@ -369,6 +369,12 @@
             <a href="#text-transform" class="nav-item">Text Transform</a>
             <a href="#font-families" class="nav-item">Font Families</a>
         </div>
+         <div class="nav-section">
+            <div class="p-4 font-bold text-lg">Gradients</div>
+            <a href="#leaner-gradients" class="nav-item">Leaner</a>
+            <a href="#circular-gradients" class="nav-item">Circular</a>
+            
+        </div>
         
         <div class="nav-section">
             <div class="p-4 font-bold text-lg">Colors</div>
@@ -427,11 +433,15 @@
             <!-- Hero Section -->
             <section id="overview" class="mb-16">
                 <div class="text-center mb-12">
-                    <h1 class="text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Nexwind CSS V.1</h1>
-                    <p class="text-xl text-gray-600 mb-8">A utility-first CSS framework for rapid UI development</p>
+
+                    <h1 class="text-7xl font-bold mb-4 gradient-4 rd-2 tc-white p-10"><span class="text-5xl">Introducing</span><br>Nexwind CSS V.1</h1>
+                    <p class="text-xl text-gray-600 mb-8"><span class="font-black">NexwindCSS – A Lightweight & Customizable Utility-First CSS Framework</span><br><br>
+<span class="text-sm ">NexwindCSS is a modern, lightweight utility-first CSS framework designed for speed, scalability, and full customization. Built with simplicity and performance in mind, NexwindCSS gives developers complete control over their UI styling without the bloat of larger frameworks.
+
+Inspired by the efficiency of Tailwind CSS and developed from scratch, NexwindCSS provides a streamlined approach to designing responsive, maintainable web interfaces using utility classes that are intuitive and developer-friendly.</span></p>
                     <div class="fx jc-c gap-4">
-                        <button class="btn btn-primary">Get Started</button>
-                        <button class="btn btn-secondary">View on GitHub</button>
+                        <button class="btn btn-primary" onclick="document.location='#installation'">Get Started</button>
+                        <button class="btn btn-primary" onclick="window.location.href = 'https://github.com/rehandesilva21/NexwindCSS/tree/main';">View on GitHub</button>
                     </div>
                 </div>
             </section>
@@ -439,7 +449,7 @@
             <!-- Installation -->
             <section id="installation" class="mb-16">
                 <h2 class="text-4xl font-bold mb-6">Installation</h2>
-                <p class="text-lg mb-6">Get started with Nexwind CSS by including it in your project.</p>
+                <p class="text-lg mb-6">Get started with Nexwind CSS by manually including it in your project.</p>
                 
                 <div class="example-box">
                     <div class="example-code">
@@ -449,6 +459,31 @@
 &lt;!-- Include Nexwind JavaScript (optional) --&gt;
 &lt;script src="nexwind.js"&gt;&lt;/script&gt;
                     </div>
+                </div>
+                <p class="text-lg mb-6">Get started with Nexwind CSS by using node package manager (npm)</p>
+                
+                <div class="example-box">
+                    <div class="example-code">
+<strong>bash </strong><br>
+npm install nexwind <strong>or</strong> npx install nexwind
+
+
+                    </div>
+                    
+                </div>
+                    <p class="text-lg mb-6">Get started with Nexwind CSS by versel store</p>
+                
+                <div class="example-box">
+                    <div class="example-code">
+&lt;!-- Include Nexwind CSS --&gt;<br>
+&lt;link rel="stylesheet" href=<a href="https://blobs.vusercontent.net/blob/nexwind-zU6vyvUF2BjlpwJdS5prlF4P2BPL2r.css" class="tc-white">"https://blobs.vusercontent.net/blob/nexwind-zU6vyvUF2BjlpwJdS5prlF4P2BPL2r.css"</a>&gt;<br><br>
+
+&lt;!-- Include Nexwind JavaScript (optional) --&gt;<br>
+&lt;script src=<a href="https://blobs.vusercontent.net/blob/nexwind-5rJrLIkdibuQ8gevJrOkXB6E34abG8.js" class="tc-white">"https://blobs.vusercontent.net/blob/nexwind-5rJrLIkdibuQ8gevJrOkXB6E34abG8.js"</a>&gt;&lt;/script&gt;
+
+
+                    </div>
+                    
                 </div>
             </section>
             
@@ -595,6 +630,43 @@
                     </div>
                 </div>
             </section>
+            
+            <!-- Gradients -->
+            <section id="leaner-gradients" class="mb-16">
+                <h3 class="text-2xl font-semibold mb-4">Gradients</h3>
+                <h2 class="text-lg">Leaner Gradient</h2>
+                <div class="example-box">
+                    <div class="example-preview">
+                        <div class="gradient-1 tc-white p-3 mb-2">Gradient 1</div>
+                        <div class="gradient-2 tc-black p-3 mb-2">Gradient 2</div>
+                        <div class="gradient-3 tc-white p-3 mb-2">Gradient 3</div>
+                        <div class="gradient-4 tc-black p-3 mb-2">Gradient 4</div>
+                        <div class="gradient-5 tc-black p-3">Gradient 5</div>
+                    </div>
+                    <div class="example-code">
+&lt;div class="gradient-1 tc-white p-3 mb-2"&gt;Gradient 1&lt;/div&gt;
+
+                    </div>
+                </div>
+            </section>
+              <!-- circular Gradients -->
+            <section id="circular-gradients" class="mb-16">
+                
+                <h2 class="text-lg">Circular Gradient</h2>
+                <div class="example-box">
+                    <div class="example-preview">
+                        <div class="gradient-6 tc-white p-3 mb-2 rd-full ">Gradient 1</div>
+                        <div class="gradient-7 tc-black p-3 mb-2 rd-full">Gradient 2</div>
+                        <div class="gradient-8 tc-white p-3 mb-2 rd-full">Gradient 3</div>
+                       
+                    </div>
+                    <div class="example-code">
+&lt;div class="gradient-1 tc-white p-3 mb-2"&gt;Gradient 1&lt;/div&gt;
+
+                    </div>
+                </div>
+            </section>
+
             
             <!-- Font Families -->
             <section id="font-families" class="mb-16">
@@ -1111,7 +1183,7 @@ function toggleDarkMode() {
         </div>
     </footer>
     
-    <script src="https://blobs.vusercontent.net/blob/nexwind-5rJrLIkdibuQ8gevJrOkXB6E34abG8.js"></script>
+    <script src="dist/nexwind.js"></script>
     <script>
         // Sidebar toggle functionality
         const sidebarToggle = document.getElementById('sidebarToggle');
