@@ -247,3 +247,7 @@
     initUtilities();
   }
 })();
+
+function toggleDarkMode() {
+      document.getElementById('docBody').classList.toggle('dark-mode');
+    }
