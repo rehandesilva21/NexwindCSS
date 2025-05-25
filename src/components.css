@@ -23,6 +23,7 @@
   --color-green-400: #22c55e;
   --color-red-500: #ef4444;
   --color-yellow-500: #facc15;
+  --color-blue-400:#0095ff;
 }
 
 /* === BUTTONS === */
@@ -57,25 +58,25 @@
   border-color: #60a5fa;
   filter: brightness(1.1);
   box-shadow: 0 6px 15px rgba(37, 99, 235, 0.6);
-  outline-offset: 3px;
-  outline: 3px solid rgba(96, 165, 250, 0.6);
+  
 }
 
 .btn-secondary {
   background-color: var(--color-gray-300);
-  color: var(--color-black);
+  color: var(--color-white);
   border-color: var(--color-gray-300);
   box-shadow: 0 4px 8px rgba(209, 213, 219, 0.4);
 }
 
 .btn-secondary:hover,
 .btn-secondary:focus-visible {
-  background-color: #e5e7eb;
-  border-color: #e5e7eb;
+  background-color: #474747;
+  
+  color: var(--color-white);
   filter: brightness(1.05);
   box-shadow: 0 6px 15px rgba(209, 213, 219, 0.6);
-  outline-offset: 3px;
-  outline: 3px solid rgba(229, 231, 235, 0.6);
+  
+  
 }
 
 .btn-danger {
@@ -91,8 +92,8 @@
   border-color: #f87171;
   filter: brightness(1.1);
   box-shadow: 0 6px 15px rgba(239, 68, 68, 0.6);
-  outline-offset: 3px;
-  outline: 3px solid rgba(248, 113, 113, 0.6);
+ 
+  
 }
 
 .btn:disabled {
@@ -235,10 +236,10 @@
 
 .nav-link:hover,
 .nav-link:focus-visible {
-  background-color: var(--color-gray-300);
-  color: var(--color-black);
+  
+  color: var(--color-blue-300);
   outline-offset: 2px;
-  outline: 2px solid var(--color-blue-300);
+ 
 }
 
 /* === BADGES === */
@@ -339,7 +340,7 @@ textarea,
 select {
   width: 100%;
   padding: 0.75rem 1rem;
-  border: 1px solid var(--color-gray-300);
+  border: 0.8px solid var(--color-blue-400);
   border-radius: var(--radius-md);
   font-size: 1rem;
   outline: none;
@@ -352,7 +353,8 @@ input:focus,
 textarea:focus,
 select:focus {
   border-color: var(--color-blue-300);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  border: 1px solid;
+  outline:none;
 }
 
 label {
