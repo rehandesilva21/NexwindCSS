@@ -1,11 +1,11 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 :root {
   /* === COLOR PALETTE === */
@@ -66,8 +66,6 @@
 }
 body{
   font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  padding: 0;
 
 }
 /* === TEXT COLORS === */
@@ -813,6 +811,37 @@ body{
             margin-top: 48px;
             flex-wrap: wrap;
         }
+/* === BORDERS===*/
+.border-1{
+  border: 0.5px solid #0968e5;
+}
+.border-2{
+  border: 1px solid #0968e5;
+}
+.border-3{
+  border: 2px solid #0968e5;
+}
+.border-4{
+  border: 3px solid #0968e5;
+}
+.border-5{
+  border: 4px solid #0968e5;
+}
+.border-6{
+  border: 5px solid #0968e5;
+}
+.border-7{
+  border: 6px solid #0968e5;
+}
+.border-8{
+  border: 7px solid #0968e5;
+}
+.border-9{
+  border: 8px solid #0968e5;
+}
+.border{
+  border: 1px solid #0968e5;
+}
 /* === SMALL DEVICES (min-width: 640px) === */
 @media (min-width: 640px) {
   .sm\:pd-4 { padding: 1rem; }
@@ -1015,7 +1044,6 @@ body{
   color: var(--color-white);
   border-color: var(--color-blue-300);
   box-shadow: 0 4px 8px rgba(37, 99, 235, 0.4);
-  text-decoration: none;
 }
 .btn-primary:hover,
 .btn-primary:focus-visible {
@@ -2038,7 +2066,6 @@ body.dark-mode .bg-secondary {
 body.dark-mode .border {
   border-color: var(--color-gray-700) !important;
 }
-
 /* Cards and containers */
 body.dark-mode .card {
   background-color: var(--background-secondary);
