@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 :root {
   /* === COLOR PALETTE === */
@@ -66,6 +66,8 @@
 }
 body{
   font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
 
 }
 /* === TEXT COLORS === */
@@ -1013,6 +1015,7 @@ body{
   color: var(--color-white);
   border-color: var(--color-blue-300);
   box-shadow: 0 4px 8px rgba(37, 99, 235, 0.4);
+  text-decoration: none;
 }
 .btn-primary:hover,
 .btn-primary:focus-visible {
@@ -2035,6 +2038,7 @@ body.dark-mode .bg-secondary {
 body.dark-mode .border {
   border-color: var(--color-gray-700) !important;
 }
+
 /* Cards and containers */
 body.dark-mode .card {
   background-color: var(--background-secondary);
