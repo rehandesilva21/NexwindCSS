@@ -3,183 +3,466 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexwind CSS - Documentation</title>
-    <link rel="stylesheet" href="https://blobs.vusercontent.net/blob/nexwind-zU6vyvUF2BjlpwJdS5prlF4P2BPL2r.css">
+    <title>Nexwind CSS - Think Different. Build Better.</title>
+    
+    <link rel="icon" type="image/x-icon" href="Favicon/favicon.ico">
+    <meta name="google-site-verification" content="mN7xxl2wzuXB5svkRHpN4GdMjwNhU3PWajR4raw25D0" />
+    <meta name="description" content="Nexwind CSS is a fast, responsive, and customizable utility-first CSS framework developed by Quartex. Ideal for modern web development.">
+    <meta property="og:title" content="Nexwind CSS – Utility-First Framework" />
+    <meta property="og:description" content="A blazing fast, lightweight, and customizable CSS framework made by Quartex." />
+    <meta property="og:url" content="https://rehandesilva21.github.io/NexwindCSS/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://rehandesilva21.github.io/NexwindCSS/cover.jpg" />
+
+      <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Framework",
+    "name": "Nexwind CSS",
+    "url": "https://rehandesilva21.github.io/NexwindCSS/",
+    "applicationCategory": "DeveloperTool",
+    "operatingSystem": "All",
+    "creator": {
+      "@type": "Company",
+      "name": "Quartex"
+    },
+    "description": "Nexwind CSS is a modern CSS utility framework inspired by Tailwind CSS, with full support for custom units and properties."
+  }
+  </script>
+    
+    <!-- Nexwind CSS Framework -->
+    <link rel="stylesheet" href="dist/nexwind.css">
     
     <style>
-        /* Custom documentation styles */
-        .doc-sidebar {
-            width: 280px;
-            height: 100vh;
-            position: fixed;
-            left: 0;
-            top: 0;
-            background: #f8fafc;
-            border-right: 1px solid #e2e8f0;
-            overflow-y: auto;
-            z-index: 1000;
-            transition: transform 0.3s ease;
+        /* Apple-inspired design system */
+        :root {
+            --apple-blue: #007AFF;
+            --apple-blue-light: #5AC8FA;
+            --apple-gray: #8E8E93;
+            --apple-gray-light: #F2F2F7;
+            --apple-gray-dark: #1C1C1E;
+            --apple-text: #1D1D1F;
+            --apple-text-secondary: #86868B;
+            --section-padding: 120px;
+            --container-max: 1200px;
         }
         
-        .doc-content {
-            margin-left: 280px;
-            min-height: 100vh;
-            background: white;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
-        .doc-header {
+        body {
+            
+            line-height: 1.6;
+            color: var(--apple-text);
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        
+        
+        
+        /* Navigation */
+    
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             height: 64px;
-            background: white;
-            border-bottom: 1px solid #e2e8f0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
         }
         
-        .sidebar-toggle {
-            display: none;
-        }
-        
-        .nav-section {
-            border-bottom: 1px solid #e2e8f0;
-        }
-        
-        .nav-item {
-            display: block;
-            padding: 8px 16px;
-            color: #64748b;
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--apple-text);
             text-decoration: none;
-            transition: all 0.2s;
-            border-left: 3px solid transparent;
         }
         
-        .nav-item:hover {
-            background: #f1f5f9;
-            color: #0f172a;
-        }
-        
-        .nav-item.active {
-            background: #eff6ff;
-            color: #2563eb;
-            border-left-color: #2563eb;
-        }
-        
-        .example-box {
-            border: 1px solid #e2e8f0;
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #007AFF, #5AC8FA);
             border-radius: 8px;
-            overflow: hidden;
-            margin: 16px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
         }
         
-        .example-preview {
-            padding: 24px;
-            background: #f8fafc;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        
-        .example-code {
-            background: #1e293b;
-            color: #e2e8f0;
-            padding: 16px;
-            overflow-x: auto;
-            font-family: 'Courier New', monospace;
-            font-size: 14px;
-        }
-        
-        .search-box {
-            position: sticky;
-            top: 0;
-            background: #f8fafc;
-            padding: 16px;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        
-        .search-input {
-            width: 100%;
-            padding: 8px 12px;
-            border: 1px solid #d1d5db;
-            border-radius: 6px;
-            font-size: 14px;
-        }
-        
-        .color-swatch {
-            width: 24px;
-            height: 24px;
-            border-radius: 4px;
-            display: inline-block;
-            margin-right: 8px;
-            border: 1px solid #e2e8f0;
-        }
-        
-        .spacing-demo {
-            background: #dbeafe;
-            border: 1px dashed #3b82f6;
-        }
-        
-        /* Footer Styles */
-        .doc-footer {
-            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-            color: #e2e8f0;
-            margin-left: 280px;
-            padding: 48px 0 24px;
-            border-top: 1px solid #475569;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 32px;
-        }
-        
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        .nav-links {
+            display: flex;
             gap: 32px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--apple-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--apple-blue);
+        }
+        
+        .nav-cta {
+            background: var(--apple-blue);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-cta:hover {
+            background: #0056CC;
+            transform: translateY(-1px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(0, 122, 255, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(90, 200, 250, 0.1) 0%, transparent 50%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(0, 122, 255, 0.1);
+            color: var(--apple-blue);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            border: 1px solid rgba(0, 122, 255, 0.2);
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-top: 48px;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: var(--apple-blue);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            background: #0056CC;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 122, 255, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--apple-blue);
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.125rem;
+            border: 2px solid var(--apple-blue);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--apple-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Sections */
+        .section {
+            padding: var(--section-padding) 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .section-header h2 {
+            margin-bottom: 24px;
+        }
+        
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 48px;
+            margin-top: 80px;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 24px;
+            padding: 48px 32px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--apple-blue), var(--apple-blue-light));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 32px;
+            color: white;
+            font-size: 2rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--apple-text);
+        }
+        
+        .feature-card p {
+            color: var(--apple-text-secondary);
+            line-height: 1.6;
+        }
+        
+        /* Code Section */
+        .code-section {
+            background: var(--apple-gray-dark);
+            color: white;
+        }
+        
+        .code-demo {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+        
+        .code-content h2 {
+            color: white;
+            margin-bottom: 24px;
+        }
+        
+        .code-content p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.25rem;
+            line-height: 1.6;
             margin-bottom: 32px;
         }
         
-        .footer-section h3 {
-            color: #f1f5f9;
-            font-size: 18px;
-            font-weight: 600;
+        .code-block {
+            background: #000;
+            border-radius: 16px;
+            padding: 32px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            overflow-x: auto;
+            position: relative;
+        }
+        
+        .code-block::before {
+            content: '';
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ff5f56;
+            box-shadow: 20px 0 #ffbd2e, 40px 0 #27ca3f;
+        }
+        
+        .code-content-inner {
+            padding-top: 24px;
+            color: #e2e8f0;
+        }
+        
+        .code-keyword { color: #c792ea; }
+        .code-string { color: #c3e88d; }
+        .code-class { color: #82aaff; }
+        .code-comment { color: #546e7a; }
+        
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, #007AFF, #5AC8FA);
+            color: white;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 48px;
+            margin-top: 64px;
+        }
+        
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        
+        .stat-item p {
+            font-size: 1.125rem;
+            opacity: 0.9;
+        }
+        
+        /* Components Showcase */
+        .components-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 64px;
+        }
+        
+        .component-demo {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .component-demo h4 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--apple-text);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--apple-gray-dark);
+            color: white;
+            padding: 80px 0 40px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 64px;
+            margin-bottom: 48px;
+        }
+        
+        .footer-brand h3 {
+            font-size: 2rem;
+            font-weight: 700;
             margin-bottom: 16px;
-            border-bottom: 2px solid #3b82f6;
-            padding-bottom: 8px;
-            display: inline-block;
+            background: linear-gradient(135deg, #007AFF, #5AC8FA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 16px;
+        }
+        
+        .social-link {
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--apple-blue);
+            transform: translateY(-2px);
+        }
+        
+        .footer-section h4 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: white;
         }
         
         .footer-links {
             list-style: none;
-            padding: 0;
-            margin: 0;
         }
         
         .footer-links li {
-            margin-bottom: 8px;
+            margin-bottom: 12px;
         }
         
         .footer-links a {
-            color: #cbd5e1;
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             transition: color 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
         }
         
         .footer-links a:hover {
-            color: #60a5fa;
-        }
-        
-        .footer-icon {
-            width: 16px;
-            height: 16px;
-            fill: currentColor;
+            color: var(--apple-blue);
         }
         
         .footer-bottom {
-            border-top: 1px solid #475569;
-            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 32px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -187,1028 +470,448 @@
             gap: 16px;
         }
         
-        .powered-by {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: 600;
-            color: #f1f5f9;
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.5);
         }
         
-        .quartex-logo {
-            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 6px;
-            font-weight: bold;
-            font-size: 14px;
+        .footer-legal {
+            display: flex;
+            gap: 24px;
         }
         
-        .social-links {
-            display: flex;
-            gap: 16px;
-        }
-        
-        .social-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: #475569;
-            border-radius: 8px;
-            color: #cbd5e1;
+        .footer-legal a {
+            color: rgba(255, 255, 255, 0.5);
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: color 0.3s ease;
         }
         
-        .social-link:hover {
-            background: #3b82f6;
-            color: white;
-            transform: translateY(-2px);
+        .footer-legal a:hover {
+            color: rgba(255, 255, 255, 0.8);
         }
         
-        .service-card {
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            border-radius: 8px;
-            padding: 16px;
-            transition: all 0.3s ease;
-        }
-        
-        .service-card:hover {
-            background: rgba(59, 130, 246, 0.15);
-            border-color: rgba(59, 130, 246, 0.3);
-            transform: translateY(-2px);
-        }
-        
-        .service-icon {
-            width: 32px;
-            height: 32px;
-            background: #3b82f6;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 12px;
-        }
-        
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .doc-sidebar {
-                transform: translateX(-100%);
+            :root {
+                --section-padding: 80px;
             }
             
-            .doc-sidebar.open {
-                transform: translateX(0);
-            }
-            
-            .doc-content {
-                margin-left: 0;
-            }
-            
-            .doc-footer {
-                margin-left: 0;
-            }
-            
-            .sidebar-toggle {
-                display: block;
-            }
-            
-            .sidebar-overlay {
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: rgba(0, 0, 0, 0.5);
-                z-index: 999;
+            .nav-links {
                 display: none;
             }
             
-            .sidebar-overlay.active {
-                display: block;
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .code-demo {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 48px;
             }
             
             .footer-bottom {
                 flex-direction: column;
                 text-align: center;
             }
-            
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 24px;
-            }
         }
         
-        .dark-mode .doc-sidebar {
-            background: #1e293b;
-            border-right-color: #334155;
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
         }
         
-        .dark-mode .doc-content {
-            background: #0f172a;
-            color: #e2e8f0;
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
         
-        .dark-mode .doc-header {
-            background: #1e293b;
-            border-bottom-color: #334155;
+        /* Dark mode support */
+        .dark-mode {
+            --apple-text: #F2F2F7;
+            --apple-text-secondary: #8E8E93;
         }
         
-        .dark-mode .nav-item {
-            color: #94a3b8;
+        .dark-mode .navbar {
+            background: rgba(28, 28, 30, 0.8);
+            border-bottom-color: rgba(255, 255, 255, 0.1);
         }
         
-        .dark-mode .nav-item:hover {
-            background: #334155;
-            color: #f1f5f9;
+        .dark-mode .hero {
+            background: linear-gradient(135deg, #1C1C1E 0%, #2C2C2E 100%);
         }
         
-        .dark-mode .example-preview {
-            background: #334155;
-            border-bottom-color: #475569;
+        .dark-mode .feature-card,
+        .dark-mode .component-demo {
+            background: #2C2C2E;
+            border-color: rgba(255, 255, 255, 0.1);
         }
         
-        .dark-mode .example-box {
-            border-color: #475569;
-        }
-        
-        .dark-mode .doc-footer {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            border-top-color: #334155;
+        .dark-mode .section {
+            background: #1C1C1E;
         }
     </style>
 </head>
-<body id="docBody">
-    <!-- Sidebar -->
-    <nav class="doc-sidebar" id="sidebar">
-        <div class="search-box">
-            <input type="text" class="search-input" placeholder="Search documentation..." id="searchInput">
-        </div>
-        
-        <div class="nav-section">
-            <div class="p-4 font-bold text-lg">Getting Started</div>
-            <a href="#installation" class="nav-item">Installation</a>
-            <a href="#overview" class="nav-item">Overview</a>
-        </div>
-        
-        <div class="nav-section">
-            <div class="p-4 font-bold text-lg">Layout</div>
-            <a href="#spacing" class="nav-item">Spacing</a>
-            <a href="#sizing" class="nav-item">Sizing</a>
-            <a href="#flexbox" class="nav-item">Flexbox</a>
-            <a href="#grid" class="nav-item">Grid</a>
-            <a href="#positioning" class="nav-item">Positioning</a>
-        </div>
-        
-        <div class="nav-section">
-            <div class="p-4 font-bold text-lg">Typography</div>
-            <a href="#font-size" class="nav-item">Font Size</a>
-            <a href="#font-weight" class="nav-item">Font Weight</a>
-            <a href="#text-align" class="nav-item">Text Align</a>
-            <a href="#text-transform" class="nav-item">Text Transform</a>
-            <a href="#font-families" class="nav-item">Font Families</a>
-        </div>
-        
-        <div class="nav-section">
-            <div class="p-4 font-bold text-lg">Colors</div>
-            <a href="#text-colors" class="nav-item">Text Colors</a>
-            <a href="#background-colors" class="nav-item">Background Colors</a>
-        </div>
-        
-        <div class="nav-section">
-            <div class="p-4 font-bold text-lg">Components</div>
-            <a href="#buttons" class="nav-item">Buttons</a>
-            <a href="#cards" class="nav-item">Cards</a>
-            <a href="#alerts" class="nav-item">Alerts</a>
-            <a href="#forms" class="nav-item">Forms</a>
-            <a href="#navigation" class="nav-item">Navigation</a>
-            <a href="#modals" class="nav-item">Modals</a>
-        </div>
-        
-        <div class="nav-section">
-            <div class="p-4 font-bold text-lg">Effects</div>
-            <a href="#animations" class="nav-item">Animations</a>
-            <a href="#shadows" class="nav-item">Shadows</a>
-            <a href="#borders" class="nav-item">Borders</a>
-        </div>
-        
-        <div class="nav-section">
-            <div class="p-4 font-bold text-lg">Charts</div>
-            <a href="#bar-charts" class="nav-item">Bar Charts</a>
-            <a href="#line-charts" class="nav-item">Line Charts</a>
-            <a href="#pie-charts" class="nav-item">Pie Charts</a>
-        </div>
-        
-        <div class="nav-section">
-            <div class="p-4 font-bold text-lg">Utilities</div>
-            <a href="#dark-mode" class="nav-item">Dark Mode</a>
-            <a href="#responsive" class="nav-item">Responsive</a>
-            <a href="#print" class="nav-item">Print Styles</a>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="logo">
+                    <div class="logo-icon">N</div>
+                    Nexwind
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#code">Code</a></li>
+                    <li><a href="#components">Components</a></li>
+                    <li><a href="#community">Community</a></li>
+                </ul>
+                
+                <a href="documentation.html" class="nav-cta">Get Started</a>
+            </div>
         </div>
     </nav>
-    
-    <!-- Sidebar Overlay for Mobile -->
-    <div class="sidebar-overlay" id="sidebarOverlay"></div>
-    
-    <!-- Main Content -->
-    <main class="doc-content">
-        <!-- Header -->
-        <header class="doc-header fx ai-c jc-sb px-6">
-            <div class="fx ai-c gap-4">
-                <button class="sidebar-toggle btn-secondary" id="sidebarToggle">☰</button>
-                <h1 class="text-2xl font-bold">Nexwind CSS V.1</h1>
+
+    <!-- Hero Section -->
+    <section class="hero ">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <div class="hero-badge">Introducing Nexwind CSS V.1.0</div>
+                <h1 class="hero-title">Think Different.<br>Build Better.</h1>
+                <p class="subtitle">The revolutionary utility-first CSS framework that transforms how you build modern web interfaces. Experience unprecedented speed, flexibility, and beauty.</p>
+                
+                <div class="hero-buttons">
+                    <a href="#" class="btn-primary">Download Nexwind</a>
+                    <a href="#" class="btn-secondary">Watch Demo</a>
+                </div>
             </div>
-            
-        </header>
-        
-        <!-- Content -->
-        <div class="p-8">
-            <!-- Hero Section -->
-            <section id="overview" class="mb-16">
-                <div class="text-center mb-12">
-                    <h1 class="text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Nexwind CSS V.1</h1>
-                    <p class="text-xl text-gray-600 mb-8">A utility-first CSS framework for rapid UI development</p>
-                    <div class="fx jc-c gap-4">
-                        <button class="btn btn-primary">Get Started</button>
-                        <button class="btn btn-secondary">View on GitHub</button>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Installation -->
-            <section id="installation" class="mb-16">
-                <h2 class="text-4xl font-bold mb-6">Installation</h2>
-                <p class="text-lg mb-6">Get started with Nexwind CSS by including it in your project.</p>
-                
-                <div class="example-box">
-                    <div class="example-code">
-&lt;!-- Include Nexwind CSS --&gt;
-&lt;link rel="stylesheet" href="nexwind.css"&gt;
-
-&lt;!-- Include Nexwind JavaScript (optional) --&gt;
-&lt;script src="nexwind.js"&gt;&lt;/script&gt;
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Spacing -->
-            <section id="spacing" class="mb-16">
-                <h2 class="text-4xl font-bold mb-6">Spacing</h2>
-                <p class="text-lg mb-6">Control padding and margin with utility classes.</p>
-                
-                <h3 class="text-2xl font-semibold mb-4">Margin</h3>
-                <div class="example-box">
-                    <div class="example-preview">
-                        <div class="spacing-demo m-4 p-4">m-4 (1rem margin)</div>
-                        <div class="spacing-demo mt-8 p-4">mt-8 (2rem top margin)</div>
-                        <div class="spacing-demo mx-6 p-4">mx-6 (1.5rem horizontal margin)</div>
-                    </div>
-                    <div class="example-code">
-&lt;div class="m-4"&gt;m-4 (1rem margin)&lt;/div&gt;
-&lt;div class="mt-8"&gt;mt-8 (2rem top margin)&lt;/div&gt;
-&lt;div class="mx-6"&gt;mx-6 (1.5rem horizontal margin)&lt;/div&gt;
-                    </div>
-                </div>
-                
-                <h3 class="text-2xl font-semibold mb-4 mt-8">Padding</h3>
-                <div class="example-box">
-                    <div class="example-preview">
-                        <div class="spacing-demo p-4">p-4 (1rem padding)</div>
-                        <div class="spacing-demo pt-8">pt-8 (2rem top padding)</div>
-                        <div class="spacing-demo px-6">px-6 (1.5rem horizontal padding)</div>
-                    </div>
-                    <div class="example-code">
-&lt;div class="p-4"&gt;p-4 (1rem padding)&lt;/div&gt;
-&lt;div class="pt-8"&gt;pt-8 (2rem top padding)&lt;/div&gt;
-&lt;div class="px-6"&gt;px-6 (1.5rem horizontal padding)&lt;/div&gt;
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Sizing -->
-            <section id="sizing" class="mb-16">
-                <h2 class="text-4xl font-bold mb-6">Sizing</h2>
-                <p class="text-lg mb-6">Control width and height with utility classes.</p>
-                
-                <div class="example-box">
-                    <div class="example-preview">
-                        <div class="w-full h-12 bg-b300 mb-4 fx ai-c jc-c tc-white">w-full h-12</div>
-                        <div class="w-1/2 h-16 bg-g400 mb-4 fx ai-c jc-c tc-white">w-1/2 h-16</div>
-                        <div class="w-1/4 h-20 bg-r500 fx ai-c jc-c tc-white">w-1/4 h-20</div>
-                    </div>
-                    <div class="example-code">
-&lt;div class="w-full h-12 bg-b300"&gt;w-full h-12&lt;/div&gt;
-&lt;div class="w-1/2 h-16 bg-g400"&gt;w-1/2 h-16&lt;/div&gt;
-&lt;div class="w-1/4 h-20 bg-r500"&gt;w-1/4 h-20&lt;/div&gt;
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Flexbox -->
-            <section id="flexbox" class="mb-16">
-                <h2 class="text-4xl font-bold mb-6">Flexbox</h2>
-                <p class="text-lg mb-6">Build flexible layouts with flexbox utilities.</p>
-                
-                <div class="example-box">
-                    <div class="example-preview">
-                        <div class="fx jc-sb ai-c p-4 bg-gray300 mb-4">
-                            <div class="bg-b300 p-2 tc-white">Item 1</div>
-                            <div class="bg-g400 p-2 tc-white">Item 2</div>
-                            <div class="bg-r500 p-2 tc-white">Item 3</div>
-                        </div>
-                        <div class="fx fx-col gap-4 p-4 bg-gray300">
-                            <div class="bg-b300 p-2 tc-white">Column 1</div>
-                            <div class="bg-g400 p-2 tc-white">Column 2</div>
-                            <div class="bg-r500 p-2 tc-white">Column 3</div>
-                        </div>
-                    </div>
-                    <div class="example-code">
-&lt;div class="fx jc-sb ai-c"&gt;
-  &lt;div&gt;Item 1&lt;/div&gt;
-  &lt;div&gt;Item 2&lt;/div&gt;
-  &lt;div&gt;Item 3&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="fx fx-col gap-4"&gt;
-  &lt;div&gt;Column 1&lt;/div&gt;
-  &lt;div&gt;Column 2&lt;/div&gt;
-  &lt;div&gt;Column 3&lt;/div&gt;
-&lt;/div&gt;
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Grid -->
-            <section id="grid" class="mb-16">
-                <h2 class="text-4xl font-bold mb-6">Grid</h2>
-                <p class="text-lg mb-6">Create complex layouts with CSS Grid.</p>
-                
-                <div class="example-box">
-                    <div class="example-preview">
-                        <div class="grid grid-cols-3 gap-4">
-                            <div class="bg-b300 p-4 tc-white text-center">1</div>
-                            <div class="bg-g400 p-4 tc-white text-center">2</div>
-                            <div class="bg-r500 p-4 tc-white text-center">3</div>
-                            <div class="bg-y500 p-4 tc-black text-center">4</div>
-                            <div class="bg-b300 p-4 tc-white text-center">5</div>
-                            <div class="bg-g400 p-4 tc-white text-center">6</div>
-                        </div>
-                    </div>
-                    <div class="example-code">
-&lt;div class="grid grid-cols-3 gap-4"&gt;
-  &lt;div class="bg-b300"&gt;1&lt;/div&gt;
-  &lt;div class="bg-g400"&gt;2&lt;/div&gt;
-  &lt;div class="bg-r500"&gt;3&lt;/div&gt;
-  &lt;div class="bg-y500"&gt;4&lt;/div&gt;
-  &lt;div class="bg-b300"&gt;5&lt;/div&gt;
-  &lt;div class="bg-g400"&gt;6&lt;/div&gt;
-&lt;/div&gt;
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Typography -->
-            <section id="font-size" class="mb-16">
-                <h2 class="text-4xl font-bold mb-6">Typography</h2>
-                <p class="text-lg mb-6">Control text appearance with typography utilities.</p>
-                
-                <h3 class="text-2xl font-semibold mb-4">Font Sizes</h3>
-                <div class="example-box">
-                    <div class="example-preview">
-                        <div class="fs-xs mb-2">Extra Small Text (fs-xs)</div>
-                        <div class="fs-sm mb-2">Small Text (fs-sm)</div>
-                        <div class="fs-md mb-2">Medium Text (fs-md)</div>
-                        <div class="fs-lg mb-2">Large Text (fs-lg)</div>
-                        <div class="fs-xl mb-2">Extra Large Text (fs-xl)</div>
-                        <div class="fs-2xl mb-2">2XL Text (fs-2xl)</div>
-                        <div class="fs-3xl">3XL Text (fs-3xl)</div>
-                    </div>
-                    <div class="example-code">
-&lt;div class="fs-xs"&gt;Extra Small Text&lt;/div&gt;
-&lt;div class="fs-sm"&gt;Small Text&lt;/div&gt;
-&lt;div class="fs-md"&gt;Medium Text&lt;/div&gt;
-&lt;div class="fs-lg"&gt;Large Text&lt;/div&gt;
-&lt;div class="fs-xl"&gt;Extra Large Text&lt;/div&gt;
-&lt;div class="fs-2xl"&gt;2XL Text&lt;/div&gt;
-&lt;div class="fs-3xl"&gt;3XL Text&lt;/div&gt;
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Font Families -->
-            <section id="font-families" class="mb-16">
-                <h3 class="text-2xl font-semibold mb-4">Font Families</h3>
-                <div class="example-box">
-                    <div class="example-preview">
-                        <div class="font-montserrat mb-2 text-lg">Montserrat Font Family</div>
-                        <div class="font-opensans mb-2 text-lg">Open Sans Font Family</div>
-                        <div class="font-lato mb-2 text-lg">Lato Font Family</div>
-                        <div class="font-oswald mb-2 text-lg">Oswald Font Family</div>
-                        <div class="font-raleway mb-2 text-lg">Raleway Font Family</div>
-                        <div class="font-playfair mb-2 text-lg">Playfair Display Font Family</div>
-                        <div class="font-nunito mb-2 text-lg">Nunito Font Family</div>
-                        <div class="font-ubuntu text-lg">Ubuntu Font Family</div>
-                    </div>
-                    <div class="example-code">
-&lt;div class="font-montserrat"&gt;Montserrat Font&lt;/div&gt;
-&lt;div class="font-opensans"&gt;Open Sans Font&lt;/div&gt;
-&lt;div class="font-lato"&gt;Lato Font&lt;/div&gt;
-&lt;div class="font-oswald"&gt;Oswald Font&lt;/div&gt;
-&lt;div class="font-raleway"&gt;Raleway Font&lt;/div&gt;
-&lt;div class="font-playfair"&gt;Playfair Display Font&lt;/div&gt;
-&lt;div class="font-nunito"&gt;Nunito Font&lt;/div&gt;
-&lt;div class="font-ubuntu"&gt;Ubuntu Font&lt;/div&gt;
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Colors -->
-            <section id="text-colors" class="mb-16">
-                <h2 class="text-4xl font-bold mb-6">Colors</h2>
-                <p class="text-lg mb-6">Apply colors to text and backgrounds.</p>
-                
-                <h3 class="text-2xl font-semibold mb-4">Text Colors</h3>
-                <div class="example-box">
-                    <div class="example-preview">
-                        <div class="tc-r500 mb-2">Red Text (tc-r500)</div>
-                        <div class="tc-b300 mb-2">Blue Text (tc-b300)</div>
-                        <div class="tc-g400 mb-2">Green Text (tc-g400)</div>
-                        <div class="tc-y500 mb-2">Yellow Text (tc-y500)</div>
-                        <div class="tc-black mb-2">Black Text (tc-black)</div>
-                        <div class="tc-gray300">Gray Text (tc-gray300)</div>
-                    </div>
-                    <div class="example-code">
-&lt;div class="tc-r500"&gt;Red Text&lt;/div&gt;
-&lt;div class="tc-b300"&gt;Blue Text&lt;/div&gt;
-&lt;div class="tc-g400"&gt;Green Text&lt;/div&gt;
-&lt;div class="tc-y500"&gt;Yellow Text&lt;/div&gt;
-&lt;div class="tc-black"&gt;Black Text&lt;/div&gt;
-&lt;div class="tc-gray300"&gt;Gray Text&lt;/div&gt;
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Background Colors -->
-            <section id="background-colors" class="mb-16">
-                <h3 class="text-2xl font-semibold mb-4">Background Colors</h3>
-                <div class="example-box">
-                    <div class="example-preview">
-                        <div class="bg-r500 tc-white p-3 mb-2">Red Background (bg-r500)</div>
-                        <div class="bg-b300 tc-white p-3 mb-2">Blue Background (bg-b300)</div>
-                        <div class="bg-g400 tc-white p-3 mb-2">Green Background (bg-g400)</div>
-                        <div class="bg-y500 tc-black p-3 mb-2">Yellow Background (bg-y500)</div>
-                        <div class="bg-gray300 tc-black p-3">Gray Background (bg-gray300)</div>
-                    </div>
-                    <div class="example-code">
-&lt;div class="bg-r500 tc-white"&gt;Red Background&lt;/div&gt;
-&lt;div class="bg-b300 tc-white"&gt;Blue Background&lt;/div&gt;
-&lt;div class="bg-g400 tc-white"&gt;Green Background&lt;/div&gt;
-&lt;div class="bg-y500 tc-black"&gt;Yellow Background&lt;/div&gt;
-&lt;div class="bg-gray300 tc-black"&gt;Gray Background&lt;/div&gt;
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Buttons -->
-            <section id="buttons" class="mb-16">
-                <h2 class="text-4xl font-bold mb-6">Buttons</h2>
-                <p class="text-lg mb-6">Pre-styled button components with hover effects.</p>
-                
-                <div class="example-box">
-                    <div class="example-preview">
-                        <div class="fx gap-4 fx-wrap">
-                            <button class="btn btn-primary">Primary Button</button>
-                            <button class="btn btn-secondary">Secondary Button</button>
-                            <button class="btn btn-danger">Danger Button</button>
-                            <button class="btn" disabled>Disabled Button</button>
-                        </div>
-                    </div>
-                    <div class="example-code">
-&lt;button class="btn btn-primary"&gt;Primary Button&lt;/button&gt;
-&lt;button class="btn btn-secondary"&gt;Secondary Button&lt;/button&gt;
-&lt;button class="btn btn-danger"&gt;Danger Button&lt;/button&gt;
-&lt;button class="btn" disabled&gt;Disabled Button&lt;/button&gt;
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Cards -->
-            <section id="cards" class="mb-16">
-                <h2 class="text-4xl font-bold mb-6">Cards</h2>
-                <p class="text-lg mb-6">Flexible content containers with shadows and hover effects.</p>
-                
-                <div class="example-box">
-                    <div class="example-preview">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="card">
-                                <div class="card-header">Card Title</div>
-                                <div class="card-body">This is a card component with a header and body. It includes hover effects and shadows.</div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header">Another Card</div>
-                                <div class="card-body">Cards are perfect for displaying content in organized sections with consistent styling.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="example-code">
-&lt;div class="card"&gt;
-  &lt;div class="card-header"&gt;Card Title&lt;/div&gt;
-  &lt;div class="card-body"&gt;Card content goes here...&lt;/div&gt;
-&lt;/div&gt;
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Alerts -->
-            <section id="alerts" class="mb-16">
-                <h2 class="text-4xl font-bold mb-6">Alerts</h2>
-                <p class="text-lg mb-6">Contextual feedback messages for user actions.</p>
-                
-                <div class="example-box">
-                    <div class="example-preview">
-                        <div class="alert alert-success mb-4">Success! Your action was completed successfully.</div>
-                        <div class="alert alert-error mb-4">Error! Something went wrong with your request.</div>
-                        <div class="alert alert-warning mb-4">Warning! Please check your input before proceeding.</div>
-                        <div class="alert alert-info">Info! Here's some helpful information for you.</div>
-                    </div>
-                    <div class="example-code">
-&lt;div class="alert alert-success"&gt;Success message&lt;/div&gt;
-&lt;div class="alert alert-error"&gt;Error message&lt;/div&gt;
-&lt;div class="alert alert-warning"&gt;Warning message&lt;/div&gt;
-&lt;div class="alert alert-info"&gt;Info message&lt;/div&gt;
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Forms -->
-            <section id="forms" class="mb-16">
-                <h2 class="text-4xl font-bold mb-6">Forms</h2>
-                <p class="text-lg mb-6">Styled form elements with focus states and validation.</p>
-                
-                <div class="example-box">
-                    <div class="example-preview">
-                        <form class="max-w-md">
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" placeholder="Enter your email">
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Password</label>
-                                <input type="password" id="password" placeholder="Enter your password">
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" placeholder="Enter your message"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="country">Country</label>
-                                <select id="country">
-                                    <option>Select a country</option>
-                                    <option>United States</option>
-                                    <option>Canada</option>
-                                    <option>United Kingdom</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>
-                                    <input type="checkbox"> I agree to the terms and conditions
-                                </label>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
-                    </div>
-                    <div class="example-code">
-&lt;form&gt;
-  &lt;div class="form-group"&gt;
-    &lt;label for="email"&gt;Email Address&lt;/label&gt;
-    &lt;input type="email" id="email" placeholder="Enter your email"&gt;
-  &lt;/div&gt;
-  &lt;div class="form-group"&gt;
-    &lt;label for="password"&gt;Password&lt;/label&gt;
-    &lt;input type="password" id="password" placeholder="Enter your password"&gt;
-  &lt;/div&gt;
-  &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
-&lt;/form&gt;
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Animations -->
-            <section id="animations" class="mb-16">
-                <h2 class="text-4xl font-bold mb-6">Animations</h2>
-                <p class="text-lg mb-6">Built-in animations and transitions for interactive elements.</p>
-                
-                <div class="example-box">
-                    <div class="example-preview">
-                        <div class="fx gap-4 fx-wrap">
-                            <div class="bg-b300 p-4 tc-white rd-2 fade-in">Fade In</div>
-                            <div class="bg-g400 p-4 tc-white rd-2 slide-up">Slide Up</div>
-                            <div class="bg-r500 p-4 tc-white rd-2 bounce">Bounce</div>
-                            <div class="bg-y500 p-4 tc-black rd-2 pulse">Pulse</div>
-                            <div class="bg-gray300 p-4 tc-black rd-2 spin">Spin</div>
-                        </div>
-                    </div>
-                    <div class="example-code">
-&lt;div class="fade-in"&gt;Fade In Animation&lt;/div&gt;
-&lt;div class="slide-up"&gt;Slide Up Animation&lt;/div&gt;
-&lt;div class="bounce"&gt;Bounce Animation&lt;/div&gt;
-&lt;div class="pulse"&gt;Pulse Animation&lt;/div&gt;
-&lt;div class="spin"&gt;Spin Animation&lt;/div&gt;
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Charts -->
-            <section id="bar-charts" class="mb-16">
-                <h2 class="text-4xl font-bold mb-6">Charts</h2>
-                <p class="text-lg mb-6">Built-in chart components for data visualization.</p>
-                
-                <h3 class="text-2xl font-semibold mb-4">Bar Chart</h3>
-                <div class="example-box">
-                    <div class="example-preview">
-                        <div class="chart-container">
-                            <div class="bar-chart" style="--chart-height: 200px;">
-                                <div class="bar" style="height: 60%; --bar-color: #3b82f6;"></div>
-                                <div class="bar" style="height: 80%; --bar-color: #22c55e;"></div>
-                                <div class="bar" style="height: 45%; --bar-color: #ef4444;"></div>
-                                <div class="bar" style="height: 90%; --bar-color: #facc15;"></div>
-                                <div class="bar" style="height: 70%; --bar-color: #8b5cf6;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="example-code">
-&lt;div class="chart-container"&gt;
-  &lt;div class="bar-chart"&gt;
-    &lt;div class="bar" style="height: 60%;"&gt;&lt;/div&gt;
-    &lt;div class="bar" style="height: 80%;"&gt;&lt;/div&gt;
-    &lt;div class="bar" style="height: 45%;"&gt;&lt;/div&gt;
-    &lt;div class="bar" style="height: 90%;"&gt;&lt;/div&gt;
-    &lt;div class="bar" style="height: 70%;"&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Dark Mode -->
-            <section id="dark-mode" class="mb-16">
-                <h2 class="text-4xl font-bold mb-6">Dark Mode</h2>
-                <p class="text-lg mb-6">Built-in dark mode support with automatic color adjustments.</p>
-                
-                <div class="example-box">
-                    <div class="example-preview">
-                        <div class="fx gap-4">
-                            <button onclick="toggleDarkMode()" class="btn btn-primary">Toggle Dark Mode</button>
-                            <div class="card">
-                                <div class="card-header">Dark Mode Example</div>
-                                <div class="card-body">This card automatically adapts to dark mode when enabled.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="example-code">
-&lt;!-- Add dark-mode class to body --&gt;
-&lt;body class="dark-mode"&gt;
-  &lt;div class="card"&gt;
-    &lt;div class="card-header"&gt;Dark Mode Card&lt;/div&gt;
-    &lt;div class="card-body"&gt;Content adapts automatically&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/body&gt;
-
-&lt;script&gt;
-function toggleDarkMode() {
-  document.body.classList.toggle('dark-mode');
-}
-&lt;/script&gt;
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Responsive -->
-            <section id="responsive" class="mb-16">
-                <h2 class="text-4xl font-bold mb-6">Responsive Design</h2>
-                <p class="text-lg mb-6">Responsive utilities for different screen sizes.</p>
-                
-                <div class="example-box">
-                    <div class="example-preview">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                            <div class="bg-b300 p-4 tc-white text-center">Responsive</div>
-                            <div class="bg-g400 p-4 tc-white text-center">Grid</div>
-                            <div class="bg-r500 p-4 tc-white text-center">Layout</div>
-                            <div class="bg-y500 p-4 tc-black text-center">Example</div>
-                        </div>
-                    </div>
-                    <div class="example-code">
-&lt;div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"&gt;
-  &lt;div&gt;Responsive&lt;/div&gt;
-  &lt;div&gt;Grid&lt;/div&gt;
-  &lt;div&gt;Layout&lt;/div&gt;
-  &lt;div&gt;Example&lt;/div&gt;
-&lt;/div&gt;
-                    </div>
-                </div>
-                
-                <div class="mt-8">
-                    <h3 class="text-xl font-semibold mb-4">Breakpoints</h3>
-                    <div class="overflow-x-auto">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Prefix</th>
-                                    <th>Min Width</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><code>sm:</code></td>
-                                    <td>640px</td>
-                                    <td>Small devices and up</td>
-                                </tr>
-                                <tr>
-                                    <td><code>md:</code></td>
-                                    <td>768px</td>
-                                    <td>Medium devices and up</td>
-                                </tr>
-                                <tr>
-                                    <td><code>lg:</code></td>
-                                    <td>1024px</td>
-                                    <td>Large devices and up</td>
-                                </tr>
-                                <tr>
-                                    <td><code>xl:</code></td>
-                                    <td>1280px</td>
-                                    <td>Extra large devices and up</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
         </div>
-    </main>
-    
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Powerful. Simple. Beautiful.</h2>
+                <p class="subtitle">Everything you need to build stunning web interfaces, reimagined from the ground up.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Optimized for performance with tree-shaking, minimal bundle size, and blazing-fast load times that keep users engaged.</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Utility-First</h3>
+                    <p>Build complex designs with simple, composable utility classes. No more wrestling with CSS - just pure creative freedom.</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📱</div>
+                    <h3>Responsive</h3>
+                    <p>Mobile-first responsive utilities that adapt beautifully to any screen size. One codebase, infinite possibilities.</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🌙</div>
+                    <h3>Dark Mode</h3>
+                    <p>Built-in dark mode support with intelligent color adjustments. Toggle themes effortlessly with zero configuration.</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🧩</div>
+                    <h3>Components</h3>
+                    <p>Pre-built, accessible components that work seamlessly together. From buttons to complex layouts - everything just works.</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>Developer Experience</h3>
+                    <p>Exceptional tooling, VS Code integration, and comprehensive documentation. Building great UIs has never been this enjoyable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Section -->
+    <section id="code" class="section code-section">
+        <div class="container">
+            <div class="code-demo">
+                <div class="code-content fade-in">
+                    <h2 class="section-title">Write less. Do more.</h2>
+                    <p>Build beautiful interfaces with intuitive utility classes. Every class name is designed to be memorable and predictable.</p>
+                    <a href="#" class="btn-primary">Explore Documentation</a>
+                </div>
+                
+                <div class="code-block fade-in">
+                    <div class="code-content-inner">
+                        <div><span class="code-comment">// Create a beautiful card component</span></div>
+                        <div><span class="code-keyword">&lt;div</span> <span class="code-class">class=</span><span class="code-string">"card p-8 rd-4 shadow-lg"</span><span class="code-keyword">&gt;</span></div>
+                        <div>  <span class="code-keyword">&lt;div</span> <span class="code-class">class=</span><span class="code-string">"fx ai-c gap-4 mb-6"</span><span class="code-keyword">&gt;</span></div>
+                        <div>    <span class="code-keyword">&lt;div</span> <span class="code-class">class=</span><span class="code-string">"w-12 h-12 bg-b300 rd-full"</span><span class="code-keyword">&gt;&lt;/div&gt;</span></div>
+                        <div>    <span class="code-keyword">&lt;h3</span> <span class="code-class">class=</span><span class="code-string">"text-2xl font-bold"</span><span class="code-keyword">&gt;</span>Amazing Feature<span class="code-keyword">&lt;/h3&gt;</span></div>
+                        <div>  <span class="code-keyword">&lt;/div&gt;</span></div>
+                        <div>  <span class="code-keyword">&lt;p</span> <span class="code-class">class=</span><span class="code-string">"tc-gray300 leading-relaxed"</span><span class="code-keyword">&gt;</span></div>
+                        <div>    Build faster with utility classes</div>
+                        <div>  <span class="code-keyword">&lt;/p&gt;</span></div>
+                        <div>  <span class="code-keyword">&lt;button</span> <span class="code-class">class=</span><span class="code-string">"btn btn-primary"</span><span class="code-keyword">&gt;</span>Learn More<span class="code-keyword">&lt;/button&gt;</span></div>
+                        <div><span class="code-keyword">&lt;/div&gt;</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section stats-section ">
+        <div class="container ">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Trusted by developers worldwide</h2>
+                <p class="tc-white fs-xl">Join thousands of developers who are building the future with Nexwind CSS.</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-item fade-in">
+                    <h3>100K+</h3>
+                    <p>Active Developers</p>
+                </div>
+                <div class="stat-item fade-in">
+                    <h3>2M+</h3>
+                    <p>Downloads</p>
+                </div>
+                <div class="stat-item fade-in">
+                    <h3>50K+</h3>
+                    <p>GitHub Stars</p>
+                </div>
+                <div class="stat-item fade-in">
+                    <h3>99%</h3>
+                    <p>Satisfaction Rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Components Section -->
+    <section id="components" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Beautiful components.<br>Ready to use.</h2>
+                <p class="subtitle">Pre-built components that look stunning and work perfectly out of the box.</p>
+            </div>
+            
+            <div class="components-grid">
+                <div class="component-demo fade-in">
+                    <h4>Buttons</h4>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <button class="btn btn-primary" style="width: 100%;">Primary Button</button>
+                        <button class="btn btn-secondary" style="width: 100%;">Secondary Button</button>
+                        <button class="btn btn-danger" style="width: 100%;">Danger Button</button>
+                    </div>
+                </div>
+                
+                <div class="component-demo fade-in">
+                    <h4>Cards</h4>
+                    <div class="card p-6 rd-3 shadow-md" style="background: #f8fafc;">
+                        <h5 style="font-weight: 700; margin-bottom: 8px;">Product Card</h5>
+                        <p style="color: #64748b; margin-bottom: 16px;">Beautiful card component with shadows.</p>
+                        <button class="btn btn-primary" style="font-size: 0.875rem; padding: 8px 16px;">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="component-demo fade-in">
+                    <h4>Forms</h4>
+                    <div style="display: flex; flex-direction: column; gap: 16px;">
+                        <input type="email" placeholder="Enter your email">
+                        <input type="password" placeholder="Password">
+                        <button class="btn btn-primary" style="width: 100%;">Sign In</button>
+                    </div>
+                </div>
+                
+                <div class="component-demo fade-in">
+                    <h4>Alerts</h4>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <div class="alert alert-success rd-2">Success message!</div>
+                        <div class="alert alert-warning rd-2">Warning alert</div>
+                        <div class="alert alert-error rd-2">Error notification</div>
+                    </div>
+                </div>
+                
+                <div class="component-demo fade-in">
+                    <h4>Navigation</h4>
+                    <nav class="nav rd-2">
+                        <a href="#" class="nav-link">Home</a>
+                        <a href="#" class="nav-link">About</a>
+                        <a href="#" class="nav-link">Contact</a>
+                    </nav>
+                </div>
+                
+                <div class="component-demo fade-in">
+                    <h4>Gradients</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                        <div style="height: 60px; background: linear-gradient(135deg, #007AFF, #5AC8FA); border-radius: 8px;"></div>
+                        <div style="height: 60px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 8px;"></div>
+                        <div style="height: 60px; background: linear-gradient(135deg, #ff6b6b, #f06595); border-radius: 8px;"></div>
+                        <div style="height: 60px; background: linear-gradient(135deg, #4facfe, #00f2fe); border-radius: 8px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="doc-footer">
-        <div class="footer-content">
-            <div class="footer-grid">
-                <!-- About Section -->
-                <div class="footer-section">
-                    <h3>About Nexwind</h3>
-                    <p class="mb-4">A modern, utility-first CSS framework designed for rapid UI development with beautiful components and responsive design.</p>
-                    <div class="powered-by">
-                        <span>Powered by</span>
-                        <span class="quartex-logo">Quartex 2025</span>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Nexwind CSS</h3>
+                    <p>The revolutionary utility-first CSS framework that transforms how you build modern web interfaces. Experience unprecedented speed, flexibility, and beauty in every line of code.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.748-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
                 
-                <!-- Services Section -->
                 <div class="footer-section">
-                    <h3>Products</h3>
-                    <div class="grid gap-4">
-                        <div class="service-card">
-                            <div class="service-icon">
-                                <svg class="footer-icon" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
-                                </svg>
-                            </div>
-                            <h4 class="font-semibold mb-1">Trova</h4>
-                            <p class="text-sm opacity-80">An all in one social media platform for travel lovers(under development)</p>
-                        </div>
-                        
-                        <div class="service-card">
-                            <div class="service-icon">
-                                <svg class="footer-icon" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
-                                </svg>
-                            </div>
-                            <h4 class="font-semibold mb-1">Neurix</h4>
-                            <p class="text-sm opacity-80">Modern and powerfull social media platform for traders and investors(under development)</p>
-                        </div>
-                        
-                        <div class="service-card">
-                            <div class="service-icon">
-                                <svg class="footer-icon" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3z"/>
-                                </svg>
-                            </div>
-                            <h4 class="font-semibold mb-1">Nexwind CSS</h4>
-                            <p class="text-sm opacity-80">Lightweight CSS framework(under development)</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Quick Links -->
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
+                    <h4>Product</h4>
                     <ul class="footer-links">
-                        <li>
-                            <a href="#installation">
-                                <svg class="footer-icon" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M3 17a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1v-2zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z"/>
-                                </svg>
-                                Getting Started
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#components">
-                                <svg class="footer-icon" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"/>
-                                </svg>
-                                Components
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#utilities">
-                                <svg class="footer-icon" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
-                                </svg>
-                                Utilities
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#examples">
-                                <svg class="footer-icon" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
-                                Examples
-                            </a>
-                        </li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Components</a></li>
+                        <li><a href="#">Templates</a></li>
+                        <li><a href="#">Playground</a></li>
+                        <li><a href="#">Examples</a></li>
                     </ul>
                 </div>
                 
-                <!-- Contact & Support -->
                 <div class="footer-section">
-                    <h3>Support & Contact</h3>
+                    <h4>Resources</h4>
                     <ul class="footer-links">
-                        <li>
-                            <a href="mailto:support@quartex.dev">
-                                <svg class="footer-icon" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-                                </svg>
-                                Email Support
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#documentation">
-                                <svg class="footer-icon" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/>
-                                </svg>
-                                Documentation
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#community">
-                                <svg class="footer-icon" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
-                                </svg>
-                                Community
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#github">
-                                <svg class="footer-icon" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"/>
-                                </svg>
-                                GitHub
-                            </a>
-                        </li>
+                        <li><a href="#">Getting Started</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Changelog</a></li>
+                        <li><a href="#">Roadmap</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Stack Overflow</a></li>
+                        <li><a href="#">Newsletter</a></li>
                     </ul>
                 </div>
             </div>
             
-            <!-- Footer Bottom -->
             <div class="footer-bottom">
-                <div class="powered-by">
-                    <span>© 2025 Nexwind CSS Framework.</span>
-                    <span class="quartex-logo">Powered by Quartex 2025</span>
-                </div>
-                
-                <div class="social-links">
-                    <a href="#twitter" class="social-link" title="Twitter">
-                        <svg class="footer-icon" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
-                        </svg>
-                    </a>
-                    <a href="#github" class="social-link" title="GitHub">
-                        <svg class="footer-icon" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"/>
-                        </svg>
-                    </a>
-                    <a href="#linkedin" class="social-link" title="LinkedIn">
-                        <svg class="footer-icon" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/>
-                        </svg>
-                    </a>
-                    <a href="#discord" class="social-link" title="Discord">
-                        <svg class="footer-icon" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M16.942 4.556a16.3 16.3 0 00-4.126-1.3 12.04 12.04 0 00-.529 1.1 15.175 15.175 0 00-4.573 0 11.585 11.585 0 00-.535-1.1 16.274 16.274 0 00-4.129 1.3A17.392 17.392 0 00.182 13.218a15.785 15.785 0 004.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 01-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0010.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 001.084 1.785 16.46 16.46 0 005.064-2.595 17.286 17.286 0 00-2.973-11.59zM6.678 10.813a1.941 1.941 0 01-1.8-2.045 1.93 1.93 0 011.8-2.047 1.919 1.919 0 011.8 2.047 1.93 1.93 0 01-1.8 2.045zm6.644 0a1.94 1.94 0 01-1.8-2.045 1.93 1.93 0 011.8-2.047 1.918 1.918 0 011.8 2.047 1.93 1.93 0 01-1.8 2.045z"/>
-                        </svg>
-                    </a>
+                <p>© 2025 Nexwind CSS. Powered by Quartex. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">License</a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- Scripts -->
+    <script src="https://blobs.vusercontent.net/blob/nexwind-vDKpubvza5JacEVRnh7bujqQzspxr5.js"></script>
     
-    <script src="https://blobs.vusercontent.net/blob/nexwind-5rJrLIkdibuQ8gevJrOkXB6E34abG8.js"></script>
     <script>
-        // Sidebar toggle functionality
-        const sidebarToggle = document.getElementById('sidebarToggle');
-        const sidebar = document.getElementById('sidebar');
-        const sidebarOverlay = document.getElementById('sidebarOverlay');
-        
-        sidebarToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('open');
-            sidebarOverlay.classList.toggle('active');
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
         });
-        
-        sidebarOverlay.addEventListener('click', () => {
-            sidebar.classList.remove('open');
-            sidebarOverlay.classList.remove('active');
-        });
-        
-        // Search functionality
-        const searchInput = document.getElementById('searchInput');
-        const navItems = document.querySelectorAll('.nav-item');
-        
-        searchInput.addEventListener('input', (e) => {
-            const searchTerm = e.target.value.toLowerCase();
-            
-            navItems.forEach(item => {
-                const text = item.textContent.toLowerCase();
-                const section = item.closest('.nav-section');
-                
-                if (text.includes(searchTerm)) {
-                    item.style.display = 'block';
-                    section.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-            
-            // Hide sections with no visible items
-            document.querySelectorAll('.nav-section').forEach(section => {
-                const visibleItems = section.querySelectorAll('.nav-item[style*="block"]');
-                if (visibleItems.length === 0 && searchTerm) {
-                    section.style.display = 'none';
-                } else if (!searchTerm) {
-                    section.style.display = 'block';
-                    section.querySelectorAll('.nav-item').forEach(item => {
-                        item.style.display = 'block';
-                    });
-                }
-            });
-        });
-        
-        // Active navigation highlighting
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-item[href^="#"]');
-        
-        function updateActiveNav() {
-            let current = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (window.scrollY >= sectionTop - 100) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        }
-        
-        window.addEventListener('scroll', updateActiveNav);
-        updateActiveNav();
-        
+
         // Smooth scrolling for navigation links
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const targetId = link.getAttribute('href').substring(1);
-                const targetSection = document.getElementById(targetId);
-                
-                if (targetSection) {
-                    targetSection.scrollIntoView({
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
                     });
                 }
-                
-                // Close mobile sidebar
-                if (window.innerWidth <= 768) {
-                    sidebar.classList.remove('open');
-                    sidebarOverlay.classList.remove('active');
-                }
             });
+        });
+
+        // Enhanced navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.backdropFilter = 'blur(20px)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.8)';
+                navbar.style.backdropFilter = 'blur(20px)';
+            }
+        });
+
+        // Dark mode toggle (if needed)
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+        }
+
+        // Initialize dark mode from localStorage
+        function initDarkMode() {
+            const isDarkMode = localStorage.getItem('darkMode') === 'true';
+            if (isDarkMode) {
+                document.body.classList.add('dark-mode');
+            }
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            initDarkMode();
         });
     </script>
 </body>
 </html>
-
