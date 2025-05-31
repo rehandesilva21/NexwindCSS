@@ -144,6 +144,51 @@
   document.readyState === 'loading'
     ? document.addEventListener('DOMContentLoaded', initNexwind)
     : initNexwind();
+  
+    function initResponsiveNav() {
+    const desktopNav = document.querySelector('.navbar');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (!desktopNav || !mobileNav) return;
+
+    const mobileNavList = mobileNav.querySelector('.mobile-nav-list');
+    const mobileNavToggle = mobileNav.querySelector('.mobile-nav-toggle');
+
+    // Build mobile nav links from desktop nav
+    function generateMobileNav() {
+      mobileNavList.innerHTML = '';
+      desktopNav.querySelectorAll('a.nav-link').forEach(link => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = link.href;
+        a.textContent = link.textContent;
+        a.className = 'mobile-nav-link';
+        li.appendChild(a);
+        mobileNavList.appendChild(li);
+      });
+    }
+
+    // Toggle mobile nav on button click
+    mobileNavToggle.addEventListener('click', () => {
+      const isVisible = mobileNavList.style.display === 'block';
+      mobileNavList.style.display = isVisible ? 'none' : 'block';
+      mobileNavToggle.setAttribute('aria-expanded', !isVisible);
+    });
+
+    generateMobileNav();
+  }
+
+  // Extend your main init to include responsive nav
+  function initNexwind() {
+    applyDataAttributes();
+    applyGlobalCSSVars();
+    applyDynamicClasses();
+    initResponsiveNav();  // Add this line
+  }
+
+  // Your existing ready-state check remains unchanged
+  document.readyState === 'loading'
+    ? document.addEventListener('DOMContentLoaded', initNexwind)
+    : initNexwind();
 })();
 
 function toggleDarkMode() {

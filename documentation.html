@@ -381,7 +381,59 @@
             <a href="#text-align" class="nav-item">Text Align</a>
             <a href="#text-transform" class="nav-item">Text Transform</a>
             <a href="#font-families" class="nav-item">Font Families</a>
+            <a href="#text-decoration" class="nav-item">Text Decorations</a>
+
         </div>
+         <div class="nav-section">
+            <div class="p-4 font-bold text-lg">Text Decorations</div>
+           
+            <a href="#text-decoration" class="nav-item">Underline</a>
+            <a href="#text-decoration" class="nav-item">Line Through</a>
+            <a href="#text-decoration" class="nav-item">Italic</a>
+
+        </div>
+         <div class="nav-section">
+            <div class="p-4 font-bold text-lg">Border Radius</div>
+            <a href="#border-radius" class="nav-item">Border Radius</a>
+            
+        </div>
+           <div class="nav-section">
+            <div class="p-4 font-bold text-lg">Index</div>
+            <a href="#z-index" class="nav-item">Z index</a>
+            
+        </div>
+          </div>
+           <div class="nav-section">
+            <div class="p-4 font-bold text-lg">Opacity</div>
+            <a href="#opacity" class="nav-item">Opacity</a>
+            
+        </div>
+           <div class="nav-section">
+            <div class="p-4 font-bold text-lg">Display</div>
+            <a href="#display" class="nav-item">Block</a>
+            <a href="#display" class="nav-item">Inline</a>
+            <a href="#display" class="nav-item">Inline-Block</a>
+            <a href="#display" class="nav-item">Hidden</a>
+            
+        </div>
+           <div class="nav-section">
+            <div class="p-4 font-bold text-lg">Visibility</div>
+            <a href="#visibility" class="nav-item">Visible</a>
+            <a href="#visibility" class="nav-item">Invisible</a>
+            
+        </div>
+          <div class="nav-section">
+            <div class="p-4 font-bold text-lg">Cursors</div>
+            <a href="#cursor" class="nav-item">Pointer</a>
+            <a href="#cursor" class="nav-item">Disable</a>
+            
+        </div>
+         <div class="nav-section">
+            <div class="p-4 font-bold text-lg">Transitions</div>
+            <a href="#transitions" class="nav-item">Transitions</a>
+            
+        </div>
+
          <div class="nav-section">
             <div class="p-4 font-bold text-lg">Gradients</div>
             <a href="#leaner-gradients" class="nav-item">Leaner</a>
@@ -647,6 +699,135 @@ npm install nexwind <strong>or</strong> npx install nexwind
                     </div>
                 </div>
             </section>
+            <!-- Text Decoration & Style -->
+<section id="text-decoration" class="mb-16">
+  <h2 class="text-4xl font-bold mb-6">Text Decoration & Style</h2>
+  <p class="text-lg mb-6">Apply underline, strikethrough, or italic styles to your text.</p>
+  <div class="example-box">
+    <div class="example-preview fx gap-4 fx-wrap">
+      <div class="underline">Underline</div>
+      <div class="line-through">Line Through</div>
+      <div class="italic">Italic Text</div>
+    </div>
+    <div class="example-code">
+&lt;div class="underline"&gt;Underline&lt;/div&gt;<br>
+&lt;div class="line-through"&gt;Line Through&lt;/div&gt;<br>
+&lt;div class="italic"&gt;Italic&lt;/div&gt;
+    </div>
+  </div>
+</section>
+
+            <!-- Border Radius -->
+<section id="border-radius" class="mb-16">
+  <h2 class="text-4xl font-bold mb-6">Border Radius</h2>
+  <p class="text-lg mb-6">Use border radius utilities to control the rounding of element corners.</p>
+  <div class="example-box">
+    <div class="example-preview fx gap-4 fx-wrap">
+      <div class="bg-b300 tc-white p-4 rd-1">rd-sm</div>
+      <div class="bg-g400 tc-white p-4 rd-2">rd-md</div>
+      <div class="bg-r500 tc-white p-4 rd-3">rd-lg</div>
+      <div class="bg-y500 tc-black p-4 rd-full">rd-full</div>
+    </div>
+    <div class="example-code">
+&lt;div class="rd-sm"&gt;Small Radius&lt;/div&gt;<br>
+&lt;div class="rd-md"&gt;Medium Radius&lt;/div&gt;<br>
+&lt;div class="rd-lg"&gt;Large Radius&lt;/div&gt;<br>
+&lt;div class="rd-full"&gt;Fully Rounded&lt;/div&gt;
+    </div>
+  </div>
+</section>
+
+<!-- Z-Index -->
+<section id="z-index" class="mb-16">
+  <h2 class="text-4xl font-bold mb-6">Z-Index</h2>
+  <p class="text-lg mb-6">Control stack order using z-index utilities.</p>
+  <div class="example-box">
+    <div class="example-code">
+&lt;div class="z-10"&gt;z-10&lt;/div&gt;<br>
+&lt;div class="z-20"&gt;z-20&lt;/div&gt;<br>
+&lt;div class="z-50"&gt;z-50&lt;/div&gt;<br>
+&lt;div class="z-auto"&gt;z-auto&lt;/div&gt;
+    </div>
+  </div>
+</section>
+<!-- Opacity -->
+<section id="opacity" class="mb-16">
+  <h2 class="text-4xl font-bold mb-6">Opacity</h2>
+  <p class="text-lg mb-6">Set the opacity of elements with these utilities.</p>
+  <div class="example-box">
+    <div class="example-preview fx gap-4 fx-wrap">
+      <div class="bg-b300 p-4 tc-white opacity-100">opacity-100</div>
+      <div class="bg-b300 p-4 tc-white opacity-50">opacity-50</div>
+      <div class="bg-b300 p-4 tc-white opacity-0">opacity-0</div>
+    </div>
+    <div class="example-code">
+&lt;div class="opacity-100"&gt;Fully Visible&lt;/div&gt;<br>
+&lt;div class="opacity-50"&gt;50% Visible&lt;/div&gt;<br>
+&lt;div class="opacity-0"&gt;Invisible&lt;/div&gt;
+    </div>
+  </div>
+</section>
+
+<!-- Display Utilities -->
+<section id="display" class="mb-16">
+  <h2 class="text-4xl font-bold mb-6">Display</h2>
+  <p class="text-lg mb-6">Control how elements are displayed.</p>
+  
+  <div class="example-box">
+    <div class="example-code">
+&lt;div class="block"&gt;Block&lt;/div&gt;<br>
+&lt;div class="inline"&gt;Inline&lt;/div&gt;<br>
+&lt;div class="inline-block"&gt;Inline Block&lt;/div&gt;<br>
+&lt;div class="hidden"&gt;Hidden&lt;/div&gt;
+    </div>
+  </div>
+</section>
+
+<!-- Visibility -->
+<section id="visibility" class="mb-16">
+  <h2 class="text-4xl font-bold mb-6">Visibility</h2>
+  <p class="text-lg mb-6">Toggle visibility of elements without affecting layout.</p>
+  <div class="example-box">
+    <div class="example-code">
+&lt;div class="visible"&gt;Visible&lt;/div&gt;<br>
+&lt;div class="invisible"&gt;Invisible (still takes up space)&lt;/div&gt;
+    </div>
+  </div>
+</section>
+<!-- Cursor Utilities -->
+<section id="cursor" class="mb-16">
+  <h2 class="text-4xl font-bold mb-6">Cursor</h2>
+  <p class="text-lg mb-6">Control the appearance of the cursor when hovering over elements.</p>
+  <div class="example-box">
+    <div class="example-preview fx gap-4 fx-wrap">
+      <div class="p-3 bg-b300 tc-white cursor-pointer">cursor-pointer</div>
+      <div class="p-3 bg-r500 tc-white cursor-not-allowed">cursor-not-allowed</div>
+    </div>
+    <div class="example-code">
+&lt;div class="cursor-pointer"&gt;Pointer&lt;/div&gt;<br>
+&lt;div class="cursor-not-allowed"&gt;Not Allowed&lt;/div&gt;
+    </div>
+  </div>
+</section>
+
+<!-- Transitions -->
+<section id="transitions" class="mb-16">
+  <h2 class="text-4xl font-bold mb-6">Transitions</h2>
+  <p class="text-lg mb-6">Apply smooth transitions between states.</p>
+  <div class="example-box">
+    <div class="example-preview fx gap-4 fx-wrap">
+      <div class="p-4 bg-b300 tc-white transition duration-150 hover:bg-b500 cursor-pointer">duration-150</div>
+      <div class="p-4 bg-g400 tc-white transition duration-300 ease-in hover:bg-g600 cursor-pointer">duration-300 ease-in</div>
+      <div class="p-4 bg-r500 tc-white transition ease-out hover:bg-r700 cursor-pointer">ease-out</div>
+    </div>
+    <div class="example-code">
+&lt;div class="transition duration-150 hover:bg-b500"&gt;Short Transition&lt;/div&gt;<br>
+&lt;div class="transition duration-300 ease-in hover:bg-g600"&gt;Ease In&lt;/div&gt;<br>
+&lt;div class="transition ease-out hover:bg-r700"&gt;Ease Out&lt;/div&gt;
+    </div>
+  </div>
+</section>
+
             
             <!-- Gradients -->
             <section id="leaner-gradients" class="mb-16">

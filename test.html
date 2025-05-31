@@ -1,58 +1,86 @@
 <!DOCTYPE html>
-<html lang="en" data-color-primary="#0095ff">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Nexwind Custom Unit Test</title>
-  <link rel="stylesheet" href="dist/nexwind.css">
-  <style>
-    body {
-      font-family: sans-serif;
-      padding: 2rem;
-      background-color: #f0f4f8;
-    }
-    .section {
-      margin-bottom: 3rem;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexwind Modern Landing Page</title>
+  <!-- Nexwind CSS CDN -->
+  <link href="dist/nexwind.css" rel="stylesheet">
 </head>
-<body id="docBody">
+<body class="bg-gray-50 text-gray-900 font-sans">
 
-  <h1 class="text-[1rem] mb-[1.5rem] text-[var(--color-primary)]">Nexwind Custom Utility Test</h1>
-
-  <!-- Box Test -->
-  <div class="section">
-    <h2 class="text-xl mb-">Box with Custom Padding, Margin, Color, Radius</h2>
-    <div class="p-[3rem] m-[2rem] bg-[#d1fae5] text-[#065f46] rd-[20px] sd-[0_4px_12px_rgba(0,0,0,0.2)]">
-      Custom padded box with green background, shadow, and radius.
+  <!-- Navbar -->
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-6">
+      <h1 class="text-2xl font-bold text-blue-600">NexBrand</h1>
+      <nav class="space-x-6">
+        <a href="#features" class="text-gray-700 hover:text-blue-600 transition">Features</a>
+        <a href="#testimonials" class="text-gray-700 hover:text-blue-600 transition">Testimonials</a>
+        <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+      </nav>
     </div>
-  </div>
+  </header>
 
-  <!-- Button Test -->
-  <div class="section">
-    <h2 class="text-xl mb-2">Custom Button</h2>
-    <button class="p-[0.75rem] px-[2rem] bg-[#2563eb] text-white fs-[1.125rem] rd-[8px] sd-[0_2px_8px_rgba(0,0,0,0.1)] hover:bg-[#67e3b5]">
-      Custom Blue Button
-    </button>
-  </div>
-
-  <!-- Input Test -->
-  <div class="section">
-    <h2 class="text-xl mb-2">Input Field with Custom Width, Padding, Border</h2>
-    <input
-      type="text"
-      placeholder="Enter text..."
-      class="w-[300px] p-[1rem] border-[2px_solid_#60a5fa] rd-[6px] fs-[1rem]"
-    />
-  </div>
-
-  <!-- Responsive & Gradient -->
-  <div class="section">
-    <h2 class="text-xl mb-2">Gradient Background Test</h2>
-    <div class="p-[3rem] text-white gradient-linear-45deg-[#4f46e5_#0ea5e9] rd-[100px]">
-      Linear gradient background with custom direction.
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-20">
+    <div class="container mx-auto text-center px-6">
+      <h2 class="text-5xl font-extrabold mb-4">Elevate Your Web Presence</h2>
+      <p class="text-xl mb-6">Craft stunning, responsive websites effortlessly with Nexwind CSS.</p>
+      <a href="#get-started" class="p-[20px] rd-[20px] a btn-primary text-blue-600 font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-gray-100 transition">Get Started</a>
     </div>
-  </div>
+  </section>
 
-  <script src="dist/nexwind.js"></script>
+  <!-- Features Section -->
+  <section id="features" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-12">Why Choose Nexwind?</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h4 class="text-xl font-semibold mb-2">Utility-First Design</h4>
+          <p>Build complex layouts with simple, composable utility classes.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h4 class="text-xl font-semibold mb-2">Responsive by Default</h4>
+          <p>Ensure your designs look great on all devices with built-in responsiveness.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h4 class="text-xl font-semibold mb-2">Customizable Components</h4>
+          <p>Leverage pre-built components that are easy to customize to fit your brand.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-20">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-12">What Our Users Say</h3>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <p class="italic mb-4">"Nexwind CSS has revolutionized our development process. It's intuitive and efficient."</p>
+          <p class="font-semibold">— Alex Johnson, Frontend Developer</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <p class="italic mb-4">"The utility-first approach of Nexwind makes styling a breeze. Highly recommended!"</p>
+          <p class="font-semibold">— Maria Gomez, UI/UX Designer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section id="get-started" class="bg-blue-600 text-white py-20">
+    <div class="container mx-auto text-center px-6">
+      <h3 class="text-4xl font-bold mb-4">Ready to Transform Your Website?</h3>
+      <p class="mb-6">Join thousands of developers who trust Nexwind CSS for their projects.</p>
+      <a href="#contact" class="bg-white text-blue-600 font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-gray-100 transition">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white text-center py-6 shadow-inner">
+    <p>&copy; 2025 NexBrand. All rights reserved.</p>
+  </footer>
+<script src="dist/nexwind.js"></script>
 </body>
 </html>

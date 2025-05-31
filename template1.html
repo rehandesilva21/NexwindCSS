@@ -1,96 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Wanderly — Explore the World</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="dist/nexwind.css">
-  <style>
-    body {
-      
-      line-height: 1.6;
-      
-    }
-    .bg-hero {
-      background-image: url('https://images.unsplash.com/photo-1707560664096-790e8976e2c8?q=80&w=2448&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-      background-size: cover;
-      background-position: center;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quartex — Future of Web</title>
+  <link rel="stylesheet" href="dist/nexwind.css" />
+  
 </head>
-<body>
+<body class="bg-[#fefefe] text-white font-[sans-serif]">
 
-  <!-- Nav Bar -->
-  <nav class="nav-bar fx jc-sb ai-c px-[2rem] py-[1rem] bg-[transparent] sd-[0_1px_4px_rgba(0,0,0,0.1)]">
-    <div class="text-[1.5rem] font-bold tc-white">Wanderly</div>
-    <div class="fx gap-[1.5rem] ">
-      <a href="#" class="nav-link tc-white">Home</a>
-      <a href="#" class="nav-link tc-white">Destinations</a>
-      <a href="#" class="nav-link tc-white">About</a>
-      <a href="#" class="nav-link tc-white">Contact</a>
-    </div>
-  </nav>
+  <!-- Navbar -->
+  <header class="flex items-center justify-between p-[1.5rem] border-b-[1px] border-[#1f1f23]">
+    <h1 class="text-[1.75rem] font-bold text-[#00e0ff]">Quartex</h1>
+    <nav class="nav-link md:flex gap-3">
+      <a href="#" class="text-[1rem] hover:text-[#00e0ff]">Home</a>
+      <a href="#" class="text-[1rem] hover:text-[#00e0ff]">Solutions</a>
+      <a href="#" class="text-[1rem] hover:text-[#00e0ff]">Pricing</a>
+      <a href="#" class="text-[1rem] hover:text-[#00e0ff]">Contact</a>
+    </nav>
+    <button class="bg-[#00e0ff] text-[#0e0e10] px-[1.5rem] py-[0.75rem] rd-[8px] fs-[1rem] hover:bg-[#00c0d0]">
+      Get Started
+    </button>
+  </header>
 
   <!-- Hero Section -->
-  <section class="bg-hero tc-[#ffffff] h-[100vh] fx fx-col jc-c ai-c text-center px-[2rem]">
-    <div class="mt-[-10vh]">
-      <h1 class="fs-[3rem] md-[4rem] font-bold mb-[2rem] fs-[5em] ">Discover Your Next Adventure</h1>
-    <p class="fs-[1.25rem] max-w-[600px] mt-[-4vh] px-[10vw]">Explore the most beautiful places around the globe with curated travel experiences just for you.>Explore the most beautiful places around the globe with curated travel experiences just for you</p>
-    <a href="#" class="btn btn-primary fs-[1rem] px-[2rem] py-[0.75rem] rd-[8px] bg-[transparent]">Start Exploring</a>
-  </div>
+  <section class="px-[2rem] md:px-[6rem] py-[6rem] text-center bg-[#ffffff]">
+    <h2 class="text-[2.5rem] md:text-[3.5rem] fw-[700] leading-[1.2] mb-[1.5rem] text-white">
+      Build the Future with <span class="text-[#00e0ff]">Quartex</span>
+    </h2>
+    <p class="text-[#c5c5c5] text-[1.125rem] max-w-[700px] mx-auto mb-[2rem]">
+      Powering next-gen digital experiences with blazing-fast, responsive, and beautifully designed components using NexwindCSS.
+    </p>
+    <div class="flex justify-center gap-[1rem] flex-wrap">
+      <button class="bg-[#00e0ff] text-[#0e0e10] px-[2rem] py-[0.75rem] rd-[6px] fs-[1rem] hover:bg-[#00c0d0]">
+        Explore Features
+      </button>
+      <button class="border-[1px] border-[#00e0ff] text-[#00e0ff] px-[2rem] py-[0.75rem] rd-[6px] fs-[1rem] hover:bg-[#111]">
+        Learn More
+      </button>
+    </div>
   </section>
 
-  <!-- Destinations -->
-  <section class="px-[2rem] py-[4rem]">
-    <h2 class="text-center fs-[2rem] fw-bold mb-[2rem]">Popular Destinations</h2>
-    <div class="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80" class="w-full rd-[8px] mb-[1rem]" alt="Bali">
-        <h3 class="fs-[1.25rem] fw-bold tc-[green]">Bali, Indonesia</h3>
-        <p>Tropical paradise with beaches and temples.</p>
+  <!-- Features Section -->
+  <section class="px-[2rem] md:px-[6rem] py-[4rem] bg-[#111113]">
+    <h3 class="text-[2rem] fw-[600] text-center mb-[3rem]">Why Choose Quartex?</h3>
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-[2rem]">
+      <div class="bg-[#1a1a1e] p-[2rem] rd-[12px] sd-[0_4px_16px_rgba(0,0,0,0.3)]">
+        <h4 class="text-[1.25rem] fw-[600] mb-[0.5rem]">⚡ Fast & Lightweight</h4>
+        <p class="text-[#b0b0b0] text-[1rem]">Built with performance in mind using atomic CSS and modern architecture.</p>
       </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full rd-[8px] mb-[1rem]" alt="Paris">
-        <h3 class="fs-[1.25rem] fw-bold tc-[green]">Paris, France</h3>
-        <p>The city of lights and love, perfect for romance.</p>
+      <div class="bg-[#1a1a1e] p-[2rem] rd-[12px] sd-[0_4px_16px_rgba(0,0,0,0.3)]">
+        <h4 class="text-[1.25rem] fw-[600] mb-[0.5rem]">🎯 Developer Friendly</h4>
+        <p class="text-[#b0b0b0] text-[1rem]">Clear utility-first approach that scales beautifully in real-world apps.</p>
       </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1552055568-f8c4fb8c6320?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full rd-[8px] mb-[1rem]" alt="Tokyo">
-        <h3 class="fs-[1.25rem] fw-bold">Tokyo, Japan</h3>
-        <p>Explore futuristic vibes and ancient traditions.</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1557409518-691ebcd96038?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full rd-[8px] mb-[1rem]" alt="Tokyo">
-        <h3 class="fs-[1.25rem] fw-bold">Tokyo, Japan</h3>
-        <p>Explore futuristic vibes and ancient traditions.</p>
+      <div class="bg-[#1a1a1e] p-[2rem] rd-[12px] sd-[0_4px_16px_rgba(0,0,0,0.3)]">
+        <h4 class="text-[1.25rem] fw-[600] mb-[0.5rem]">💡 Fully Customizable</h4>
+        <p class="text-[#b0b0b0] text-[1rem]">Use arbitrary values, custom classes, and easily extend the framework.</p>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="bg-[#f1f5f9] px-[2rem] py-[4rem]">
-    <h2 class="text-center fs-[2rem] fw-bold mb-[2rem]">What Our Travelers Say</h2>
-    <div class="grid  md:grid-cols-2 lg:grid-cols-3">
-      <div class="card mb-[2vh]">
-        <p>"Wanderly made planning our honeymoon effortless. We loved every second!"</p>
-        <div class="font-bold mt-[1rem]">— Emma & Liam</div>
-      </div>
-      <div class="card mb-[2vh]">
-        <p>"The guides were super helpful and the locations were breathtaking. Highly recommend!"</p>
-        <div class="font-bold mt-[1rem]">— Carlos G.</div>
-      </div>
-      <div class="card mb-[2vh]">
-        <p>"I never knew travel could be this smooth. Wanderly handles everything seamlessly."</p>
-        <div class="font-bold mt-[1rem]">— Priya S.</div>
-      </div>
-    </div>
+  <!-- Call To Action -->
+  <section class="px-[2rem] md:px-[6rem] py-[4rem] bg-[#0e0e10] text-center">
+    <h3 class="text-[2rem] fw-[600] mb-[1.5rem]">Ready to build stunning UIs?</h3>
+    <p class="text-[#bcbcbc] mb-[2rem] max-w-[600px] mx-auto">
+      Join thousands of developers using NexwindCSS to streamline their workflow and build fast, modern websites.
+    </p>
+    <button class="bg-[#00e0ff] text-[#0e0e10] px-[2rem] py-[0.75rem] rd-[8px] fs-[1rem] hover:bg-[#00c0d0]">
+      Start Now — It’s Free
+    </button>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center px-[2rem] py-[2rem] bg-[#1f2937] tc-white">
-    <p>&copy; 2025 Wanderly. All rights reserved.</p>
+  <footer class="text-center py-[2rem] text-[#888] text-[0.875rem] border-t-[1px] border-[#1f1f23]">
+    © 2025 Quartex. All rights reserved.
   </footer>
-
-  <script src="dist/nexwind.js"></script>
+<script src="dist/nexwind.js"></script>
 </body>
 </html>

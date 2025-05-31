@@ -213,7 +213,7 @@
 }
 
 /* === NAVIGATION === */
-.nav-bar {
+.navbar {
    position: fixed;
             top: 0;
             width: 100%;
@@ -222,6 +222,7 @@
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             z-index: 1000;
             transition: all 0.3s ease;
+            justify-content: space-between;
 }
 
 
@@ -241,6 +242,75 @@
   outline-offset: 2px;
  
 }
+
+/* Mobile Navigation */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  position: relative;
+  background: var(--mobile-nav-bg, #fff);
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Mobile Nav Toggle Button */
+.mobile-nav-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+  color: var(--text-color, #222);
+  align-self: flex-end;
+}
+
+/* Mobile Nav List */
+.mobile-nav-list {
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0 0 0;
+  border-top: 1px solid #ccc;
+}
+
+.mobile-nav-list li + li {
+  margin-top: 0.75rem;
+}
+
+.mobile-nav-list a.mobile-nav-link {
+  text-decoration: none;
+  color: var(--text-color, #222);
+  font-weight: 600;
+  padding: 0.5rem 0;
+  display: block;
+}
+
+/* Hover style for mobile nav links */
+.mobile-nav-list a.mobile-nav-link:hover {
+  background-color: var(--hover-bg, #eee);
+  border-radius: 4px;
+}
+
+/* Responsive Breakpoints */
+/* Show desktop nav on desktop, hide mobile nav */
+@media screen and (min-width: 768px) {
+  
+  .mobile-nav {
+    display: none !important;
+  }
+}
+
+/* Show mobile nav on smaller screens, hide desktop nav */
+@media screen and (max-width: 767px) {
+  .navbar {
+    display: none !important;
+  }
+  .mobile-nav {
+    display: flex;
+  }
+}
+
 
 /* === BADGES === */
 .badge {
